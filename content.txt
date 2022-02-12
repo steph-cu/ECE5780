@@ -1,0 +1,38 @@
+C:\Users\steph\Documents\USU\ECE5780\part1_skeleton.exe
+
+F1 has started executing. The time is now:
+          1.000000800
+F1 has finished executing. The time is now:
+          1.300000900
+F2 has started executing. The time is now:
+          1.300000900
+F2 has finished executing. The time is now:
+          1.450001700
+F3 has started executing. The time is now:
+          1.500002400
+F3 has finished executing. The time is now:
+          1.700002900
+F1 has started executing. The time is now:
+          2.000001300
+F1 has finished executing. The time is now:
+          2.300001800
+F2 has started executing. The time is now:
+          2.300001800
+F2 has finished executing. The time is now:
+          2.450002400
+F3 has started executing. The time is now:
+          2.500002200
+F3 has finished executing. The time is now:
+          2.700002900
+F1 has started executing. The time is now:
+          3.000002000
+F1 has finished executing. The time is now:
+          3.300002800
+F2 has started executing. The time is now:
+          3.300002800
+F2 has finished executing. The time is now:
+          3.450003500
+F3 has started executing. The time is now:
+          3.500003000
+F3 has finished executing. The time is now:
+          3.700003300

@@ -14,24 +14,27 @@ int main(int argc, char const *argv[])
         fprintf(stdout, "There aren't enough files please have the execution be: ./scheduler.exe input.txt output.txt\n");
         return -1;
     }
-
-    fprintf(stdout, "made it here\n");
-
-    FILE * inputFile = fopen(argv[1], "r");
-    if(inputFile == NULL){
+    
+    ifstream inputFile;
+    inputFile.open(argv[1], ios::in);
+    if(!inputFile.is_open()){
         fprintf(stdout, "The program couldn't open the input file.");
         return -1;
     }
 
-    FILE * outputFile = fopen(argv[2],"w");
-    if(outputFile = NULL){
+    ofstream outputFile;
+    outputFile.open(argv[2], ios::out);
+    if(!outputFile.is_open()){
         fprintf(stdout, "The program couldn't open and write to the output file.");
         return -1;
     }
 
-    
+    string line;
+    while(getline(inputFile, line)){
+        outputFile << line << endl;
+    }
 
-    fclose(inputFile);
-    fclose(outputFile);
+    inputFile.close();
+    outputFile.close();
     return 0;
 }

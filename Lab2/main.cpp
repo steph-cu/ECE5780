@@ -5,6 +5,7 @@
 //#include <io.h>
 #include <string>
 #include <math.h>
+#include "task.cpp"
 
 using namespace std;
 
@@ -29,10 +30,34 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
+    int whileCount = 0;
+    int totDuration = 0;
+    int numTasks = 0;
     string line;
+    Task tasks[20];
     while(getline(inputFile, line)){
-        outputFile << line << endl;
+        if (whileCount == 0){
+            numTasks= stoi(line);
+        }
+        else if(whileCount == 1){
+            totDuration = stoi(line);
+        }
+        else{
+            Task newTask;
+            int place1 = line.find(',',0);
+            newTask.id = line.substr(0,place1);
+            int place2 = line.find(',',place1+1);
+            int len = place2 - 1 - place1;
+            newTask.executionTime = stoi(line.substr(place1+1,len));
+            newTask.period = stoi(line.substr(place2+1));
+            tasks[whileCount-2] = newTask;
+        }
+        whileCount += 1;
     }
+
+    // for(int j=0; j < 20; j++){
+    //     cout << tasks[j].id << " - " << tasks[j].executionTime << " - " << tasks[j].period << " - " << tasks[j].isRunning << endl;
+    // }
 
     inputFile.close();
     outputFile.close();

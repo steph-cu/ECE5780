@@ -9,11 +9,15 @@ class Task{
         std::string id;
         int executionTime;
         int period; 
-        bool isRunning;
+        int currentPeriod;
+        bool Aperiod;
+        bool released;
         Task(){
             id = '0';
             executionTime = 0;
             period = 0; 
-            isRunning = false;
+            currentPeriod = 0;
+            Aperiod = false;
+            released = false;
         } 
 };

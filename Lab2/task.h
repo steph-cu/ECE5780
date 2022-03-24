@@ -6,4 +6,5 @@ class Task{
         int executionTime;
         int period; 
         bool isRunning; 
+        bool released;
 };

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void sort(vector<Task*> &list, int end)// will sort the array by priority (initial period)
+void sort(vector<Task*> &list)// will sort the array by priority (initial period) puts the highest priority/shortest period into the 0 position
 {
     // int highest = 0; // highest priority is the first element in the vector
     // Task temp;
@@ -37,10 +37,10 @@ void sort(vector<Task*> &list, int end)// will sort the array by priority (initi
     int longestPeriodIndex=0;
     int shortestPeriodIndex=0;
     Task *temp = new Task();
-    for(int i =0; i<end; i++){  
+    for(int i =0; i<list.size(); i++){  
         longestPeriodIndex = i;
         shortestPeriodIndex = i;
-        for(int j= i; j<end; j++){
+        for(int j= i; j<list.size(); j++){
             if(list[j]->period < list[shortestPeriodIndex]->period){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
                 shortestPeriodIndex = j;
             }
@@ -54,55 +54,110 @@ void sort(vector<Task*> &list, int end)// will sort the array by priority (initi
     }
 }
 
-void RMA(vector<Task*> list, vector<string> timing, int numTasks, int totDuration)
-{// not sure where to put the aperiod (whether they need to be top or low priority) {I prefer top, so before everything else}
+void RMA(vector<Task*> &taskList, vector<string> &timing)
+{// not sure where to put the aperiotic (whether they need to be top or low priority) {I prefer top, so before everything else}
     int timeStamp = 0;
     int stopping = 0;
     int finished = 0;
-    for(int i = 0; i < numTasks; i++)
-    {
-        timeStamp = list[i]->period;// deadline
-        stopping = list[i]->executionTime;// when to stop executing
-        finished = 0;// tracking execution
-        for(int j = 0; j < totDuration; j++)
-        {
-            if (j > timeStamp)// miss deadline
-            {
-                cout << "Miss Task: " << list[i]->id << endl;
-                // do we want to skip the missed dealine?
-            }
-            if (finished > stopping)// if it's done executing for the period
-            {
-                finished = 0;
-                j = timeStamp;
-                timeStamp += list[i]->period;// next stopping point 
-            }
-            if (timing[j] == "")// see if the schedule has been filled
-            {
-                finished++;
-                timing[j] = list[i]->id;
-            }
-        }
+    std::cout << "******************************************TIMEING BEFORE RMA**********************************************************************" << endl;
+    for(int q = 0; q < timing.size(); q++){
+        std::cout << timing.at(q) << "-";
     }
+    cout << endl;
+    //string& currTiming = timing.at(20);
+    //cout << "&currTiming:" << &currTiming << endl;
+    //currTiming = "This is a test";
+    //cout << "&currTiming:" << &currTiming << endl;
+    for(int currTimingIndex = 0; currTimingIndex<timing.size(); currTimingIndex++) // start looking at each timing segment then decide on what goes into that timing segment
+    {
+        string& currTiming = timing.at(currTimingIndex);
+        for(int currTaskIndex = 0; currTaskIndex < taskList.size(); currTaskIndex++){ // look at each task and decide if it should go into that timing segment.
+            Task* currTask = taskList.at(currTaskIndex); 
+            //TODO check each task if it's passed it's deadline to see if it got missed or if it needs to be reset.
+
+
+            if(currTiming != ""){ //if something has been scheduled, it was put there by a higher priority task and go on to the next timing segment.
+                //do nothing - break?
+                cout << " **** "<<timing.at(currTimingIndex) << " **** is scheduled at time: " << currTimingIndex <<endl;
+                break;
+            }
+            else if(!currTask->released && currTask->executionTime == 0){ //if it is not ready to execute and hasn't been preempted
+                //do nothing - break?
+                cout << currTask->id << " isn't ready to be executed at time: " << currTimingIndex<< endl;
+            }
+            else if(!currTask->released && currTask->currentExecutionCounter != 0){ // if it needs to finnish
+                cout << currTask->id << " needs to finish at time: "<< currTimingIndex << " with: " << currTask->currentExecutionCounter << " executions left" << endl;
+                currTask->released = false;
+                currTiming = currTask->id; // schedule it
+                currTask->currentExecutionCounter -= 1; // decrement the number of time segments it needs to finish
+            }
+            else if(currTask->released){
+                cout << "we scheduled : " << currTask->id << " at time: " << currTimingIndex <<endl;
+                currTiming = currTask->id; // schedule it
+                currTask->released = false; // lock it
+                currTask->numExecutions += 1; 
+                currTask->currentDeadline = currTask->numExecutions * currTask->period; // set the next deadline
+                currTask->currentExecutionCounter= currTask->executionTime-1; //set the number of times it needs to execute to finish
+            }
+
+            if(currTimingIndex > currTask->currentDeadline && currTask->currentExecutionCounter != 0){ // it missed the deadline
+                cout << "ID: " << currTask->id << " Missed its deadline" << endl;
+                currTask->numMissedDeadlines += 1;
+            }
+            else if (currTimingIndex > currTask->currentDeadline && currTask->currentExecutionCounter == 0){ // we've passed its deadline and it doesn't need to finish.
+                currTask->released = true;
+                cout << currTask->id << " is ready to be scheduled again after passing the deadline at:" << currTask->currentDeadline  <<  endl;
+            }
+            
+        }
+        // finished = 0;// tracking execution
+
+        // for(int j = 0; j < timing.size(); j++)
+        // {
+        //     if (j > timeStamp)// miss deadline
+        //     {
+        //         cout << "Miss Task: " << list.at(i)->id << endl;
+        //         // do we want to skip the missed dealine?
+        //     }
+        //     if (finished > stopping)// if it's done executing for the period
+        //     {
+        //         finished = 0;
+        //         timeStamp = j;
+        //         timeStamp += list.at(i)->period;// next stopping point 
+        //     }
+        //     if (timing.at(j) == "")// see if the schedule has been filled
+        //     {
+        //         //cout << "j: " << j << " - i: " << i << " - " << &timing.at(j) << " - " << timing.size() <<  endl;
+        //         finished++;
+        //         timing.at(j)  =  list.at(i)->id;
+        // //     }
+        // // }
+    }
+    cout << "******************************************TIMEING AFTER RMA**********************************************************************" << endl;
+    for(int q = 0; q<timing.size(); q++){
+        cout << timing.at(q) << "-";
+    }
+    cout << endl;
 }
-void update(vector<Task*> list, int numTasks, int time)
+
+void update(vector<Task*> &list, int numTasks, int time)
 {
     for (int i = 0; i < numTasks; i++)
     {
-        if (time >= list[i]->currentPeriod)
+        if (time >= list[i]->currentDeadline)
         {
             list[i]->released = true;
         }
-        if (time >= list[i]->currentPeriod + list[i]->period)
+        if (time >= list[i]->currentDeadline + list[i]->period)
         {
             cout << list[i]->id << " missed its Deadline!" << endl;
             //list[i].currentPeriod += list[i].period; // if we decide to skip missed deadlines
         }
     }
-    sort(list, numTasks);
+    sort(list);
 }
 
-void EDF(vector<Task*> list, vector<string> timing2, int numTasks, int totDuration)
+void EDF(vector<Task*> &list, vector<string> timing2, int numTasks, int totDuration)
 {
     int consecutive = 0;
     for (int time = 0; time < totDuration; time++)// We go through each point 
@@ -113,7 +168,7 @@ void EDF(vector<Task*> list, vector<string> timing2, int numTasks, int totDurati
         if (consecutive > list[0]->executionTime)// runs with expectation of FIFO then updates accordingly
         {
             list[0]->released = false;
-            list[0]->currentPeriod += list[0]->period;
+            list[0]->currentDeadline += list[0]->period;
             update(list, numTasks, time);
             consecutive = 0;
         }
@@ -163,35 +218,45 @@ int main(int argc, char const *argv[])
             int len = place2 - 1 - place1;
             newTask->executionTime = stoi(line.substr(place1+1,len));
             newTask->period = stoi(line.substr(place2+1));
+            newTask->currentDeadline = newTask->period;
+            //newTask->currentExecutionCounter = newTask->executionTime;
             tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
         }
         whileCount += 1;
     }
 
-   for(int j=0; j < tasks.size(); j++){
-        cout << tasks[j]->id << " - " << tasks[j]->executionTime << " - " << tasks[j]->period << " - " << tasks[j]->released << endl;
-    }
+//    for(int j=0; j < tasks.size(); j++){
+//         cout << tasks[j]->id << " - " << tasks[j]->executionTime << " - " << tasks[j]->period << " - " << tasks[j]->released << endl;
+//     }
     
     vector <string> timing;
     timing.resize(totDuration);
     vector <string> timing2;
     timing2.resize(totDuration);
 
-    cout << "made it here in the execution" << endl;
+    //cout << "made it here in the execution" << endl;
 
-    for(int j=0; j < tasks.size(); j++){
-        cout << tasks[j]->id << " - " << &tasks[j] << endl;
+    // for(int j=0; j < tasks.size(); j++){
+    //     cout << tasks[j]->id << " - " << &tasks[j] << endl;
+    // }
+    string *testString = new string(""); // to test to see if the string is empty create a testString
+    for(int j=0; j < timing.size(); j += 100){
+        cout << timing[j] << " - " << &timing[j] << " - " << (timing[j] == *testString)  << " - " << j << " - " << timing.size()  <<  endl;
     }
 
-    sort(tasks, tasks.size());
+
+    sort(tasks);
 
     cout << "made it after the sort" << endl;
     for(int j=0; j < tasks.size(); j++){
         cout << tasks[j]->id << " - " << tasks[j]->executionTime << " - " << tasks[j]->period << " - " << tasks[j]->released << endl;
     }
 
-    RMA(tasks, timing, numTasks, totDuration);
-    EDF(tasks, timing2, numTasks, totDuration);
+    RMA(tasks, timing);
+    
+    cout << "made it past RMA" << endl;
+
+    //EDF(tasks, timing2, numTasks, totDuration);
  
 
     inputFile.close();

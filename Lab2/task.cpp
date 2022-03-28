@@ -22,7 +22,7 @@ class Task{
             period = 0; 
             currentDeadline = 0; //Allows each task to know when it's next deadline is going to be which might be different from period.
             currentExecutionCounter = 0; //Allows each task to know how much longer it needs to execute to finish because it might be preempted.
-            numExecutions = 0; // keep track of how many times its executed
+            numExecutions = 1; // keep track of how many times its executed
             numPreemptions = 0; // keep track of how many times it was preempted
             numMissedDeadlines = 0;
             Aperiotic = false;

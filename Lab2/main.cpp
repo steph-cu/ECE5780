@@ -19,10 +19,10 @@ void sort(vector<Task*> &list)// will sort the array by priority (initial period
         longestPeriodIndex = i;
         shortestPeriodIndex = i;
         for(int j= i; j<list.size(); j++){
-            if(list[j]->period < list[shortestPeriodIndex]->period){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
+            if(list[j]->period < list[shortestPeriodIndex]->currentDeadline){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
                 shortestPeriodIndex = j;
             }
-            else if(list[j]->period > list[longestPeriodIndex]->period){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
+            else if(list[j]->period > list[longestPeriodIndex]->currentDeadline){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
                 longestPeriodIndex = j;
             }
         }
@@ -51,8 +51,8 @@ void RMA(vector<Task*> &taskList, vector<string> &timing)
             
             if (currTimingIndex > currTask->currentDeadline-1 && currTask->currentExecutionCounter == 0 && currTask->released == false){ // we've passed its deadline and it doesn't need to finish.
                 currTask->released = true;
-                //currTask->numExecutions += 1; 
-                currTask->currentDeadline = currTask->numExecutions * currTask->period; // set the next deadline
+                currTask->numExecutions += 1; 
+                currTask->currentDeadline += currTask->period; // set the next deadline
                 cout << currTask->id << " - is released and is reset" << endl;
             }
 
@@ -71,8 +71,6 @@ void RMA(vector<Task*> &taskList, vector<string> &timing)
                 }
                 continue;
             }
-            
-            
             
             if(currTask->released == false && currTask->currentExecutionCounter != 0){ // if it needs to finnish
                 currTask->released = false;
@@ -95,36 +93,37 @@ void RMA(vector<Task*> &taskList, vector<string> &timing)
     }
 }
 
-void update(vector<Task*> &list, int numTasks, int time)
+void update(vector<Task*> &tasks, int time)
 {
-    for (int i = 0; i < numTasks; i++)
+    for (int i = 0; i < tasks.size(); i++)
     {
-        if (time >= list[i]->currentDeadline)
+        if (time >= tasks[i]->currentDeadline)
         {
-            list[i]->released = true;
+            tasks[i]->released = true;
         }
-        if (time >= list[i]->currentDeadline + list[i]->period)
+        if (time >= tasks[i]->currentDeadline + tasks[i]->period)
         {
-            cout << list[i]->id << " missed its Deadline!" << endl;
+            cout << tasks[i]->id << " missed its Deadline!" << endl;
             //list[i].currentPeriod += list[i].period; // if we decide to skip missed deadlines
         }
     }
-    sort(list);
+    sort(tasks);
 }
 
-void EDF(vector<Task*> &list, vector<string> timing2, int numTasks, int totDuration)
+void EDF(vector<Task*> &tasks, vector<string> &timing2)
 {
+    cout << "made it to EDF" << endl;
     int consecutive = 0;
-    for (int time = 0; time < totDuration; time++)// We go through each point 
+    for (int time = 0; time < timing2.size(); time++)// We go through each point 
     {
-        char* currId = &list[0]->id[0]; //functionally a cast from string to char*. Gets the ID from the 0 position in list
-        timing2[time] = *currId;// If sort works, this should always be top priority
+        Task* currTask = tasks.at(0); //functionally a cast from string to char*. Gets the ID from the 0 position in list
+        timing2.at(time) = currTask->id;// If sort works, this should always be top priority
         consecutive++;
-        if (consecutive > list[0]->executionTime)// runs with expectation of FIFO then updates accordingly
+        if (consecutive > currTask->executionTime)// runs with expectation of FIFO then updates accordingly
         {
-            list[0]->released = false;
-            list[0]->currentDeadline += list[0]->period;
-            update(list, numTasks, time);
+            currTask->released = false;
+            currTask->currentDeadline += currTask->period;
+            update(tasks, time);
             consecutive = 0;
         }
     }
@@ -220,10 +219,41 @@ int main(int argc, char const *argv[])
     }
     cout << endl;
     
-    
+   for(int i = 0; i<tasks.size(); i++){
+        Task* currTask = tasks.at(i);
+        currTask->currentDeadline = currTask->period;
+        currTask->currentExecutionCounter = 0;
+        currTask->numExecutions = 0;
+        currTask->numPreemptions = 0;
+        currTask->released = true;
+    }
 
-    //EDF(tasks, timing2, numTasks, totDuration);
- 
+    sort(tasks);
+
+    cout << "EDF*****************************************************************************" << endl;
+    for(int q = 0; q<timing2.size(); q++){
+        cout << timing2.at(q) << " - ";
+
+    }
+    cout << endl;
+    EDF(tasks, timing2);
+    for(int q = 0; q<timing2.size(); q++){
+        cout << timing2.at(q) << " - ";
+
+    }
+    cout << endl;
+    
+    cout << "made it past edf" << endl;
+
+    tasks.clear();
+    tasks.resize(0);
+    
+    timing.clear();
+    timing.resize(0);
+
+    timing2.clear();
+    timing2.resize(0);
+
 
     inputFile.close();
     outputFile.close();

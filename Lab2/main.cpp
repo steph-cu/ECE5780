@@ -45,11 +45,13 @@ void RMA(vector<Task*> &taskList, vector<string> &timing)
             if(currTimingIndex > currTask->currentDeadline && ((currTask->currentExecutionCounter != 0 && currTask->released == false) || (currTask->released == true))){ // it missed the deadline
                 currTask->numMissedDeadlines += 1;
                 cout << currTask->id << " - Missed it's deadline" << endl;
+                currTask->released = false; // resets the task when it misses a deadline.
+                currTask->currentExecutionCounter = 0;
             }
             
             if (currTimingIndex > currTask->currentDeadline-1 && currTask->currentExecutionCounter == 0 && currTask->released == false){ // we've passed its deadline and it doesn't need to finish.
                 currTask->released = true;
-                currTask->numExecutions += 1; 
+                //currTask->numExecutions += 1; 
                 currTask->currentDeadline = currTask->numExecutions * currTask->period; // set the next deadline
                 cout << currTask->id << " - is released and is reset" << endl;
             }

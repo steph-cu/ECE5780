@@ -12,20 +12,27 @@ using namespace std;
 
 void sort(vector<Task*> &list)// will sort the array by priority (initial period) puts the highest priority/shortest period into the 0 position
 {    
-    int longestPeriodIndex=0;
+    //int longestPeriodIndex=0;
     int shortestPeriodIndex=0;
     Task *temp = new Task();
     for(int i =0; i<list.size(); i++){  
-        longestPeriodIndex = i;
+        //longestPeriodIndex = i;
         shortestPeriodIndex = i;
         for(int j= i; j<list.size(); j++){
-            //if(list[j]->period < list[shortestPeriodIndex]->currentDeadline){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
-            if(list[j]->currentDeadline < list[shortestPeriodIndex]->currentDeadline){   
-                shortestPeriodIndex = j;
-            }
-            //else if(list[j]->period > list[longestPeriodIndex]->currentDeadline){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
-            else if(list[j]->currentDeadline > list[longestPeriodIndex]->currentDeadline){   
-                longestPeriodIndex = j;
+            if(list[j]->released)// will only care about sorting ones that are released
+            {
+                //if(list[j]->period < list[shortestPeriodIndex]->currentDeadline){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
+                if(list[j]->Aperiotic == true && list[shortestPeriodIndex]->Aperiotic == false)// sets aperiotic as high priority
+                    shortestPeriodIndex = j;
+                else if (list[j]->Aperiotic == list[shortestPeriodIndex]->Aperiotic){
+                    if(list[j]->currentDeadline < list[shortestPeriodIndex]->currentDeadline) // this is the original if of the sort
+                        shortestPeriodIndex = j;
+                }
+                // commented this out because it isn't used
+                //else if(list[j]->period > list[longestPeriodIndex]->currentDeadline){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
+                // else if(list[j]->currentDeadline > list[longestPeriodIndex]->currentDeadline){   
+                //     longestPeriodIndex = j;
+                // }
             }
         }
         temp = list[shortestPeriodIndex];
@@ -156,17 +163,18 @@ int main(int argc, char const *argv[])
     int whileCount = 0;
     int totDuration = 0;
     int numTasks = 0;
+    bool onAperiodic = false;
     string line;
     vector<Task*> tasks; // implementing the tasks as a dynamic vector.
 
     while(getline(inputFile, line)){
         if (whileCount == 0){
-            numTasks= stoi(line);
+            numTasks = stoi(line);
         }
         else if(whileCount == 1){
             totDuration = stoi(line);
         }
-        else{
+        else if(!onAperiodic && whileCount < numTasks + 2){
             //line will look like "A,10,200"
             Task* newTask = new Task(); // parse through the line to get the correct id executionTime and period
             int place1 = line.find(',',0);
@@ -176,6 +184,24 @@ int main(int argc, char const *argv[])
             newTask->executionTime = stoi(line.substr(place1+1,len));
             newTask->period = stoi(line.substr(place2+1));
             newTask->currentDeadline = newTask->period;
+            //newTask->currentExecutionCounter = newTask->executionTime;
+            tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
+        }
+        else if(whileCount == numTasks + 2){// will start getting 
+            onAperiodic = true;
+            numTasks += stoi(line);
+        }
+        else//****************NEW FOR SETTING UP APERIODIC TASK*********************
+        {
+            Task* newTask = new Task(); // parse through the line to get the correct id executionTime and period
+            int place1 = line.find(',',0);
+            newTask->id = line.substr(0,place1);
+            int place2 = line.find(',',place1+1);
+            int len = place2 - 1 - place1;
+            newTask->executionTime = stoi(line.substr(place1+1,len));
+            newTask->Aperiotic = true;
+            newTask->period = stoi(line.substr(place2+1));// period will act as release time for aperiodic
+            newTask->currentDeadline = totDuration;
             //newTask->currentExecutionCounter = newTask->executionTime;
             tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
         }
@@ -223,11 +249,14 @@ int main(int argc, char const *argv[])
     
    for(int i = 0; i<tasks.size(); i++){
         Task* currTask = tasks.at(i);
-        currTask->currentDeadline = currTask->period;
+        if (!(currTask->Aperiotic)// because period will releasetime so we want their deadline to stay the end of the program
+            currTask->currentDeadline = currTask->period;
         currTask->currentExecutionCounter = 0;
         currTask->numExecutions = 0;
         currTask->numPreemptions = 0;
         currTask->released = true;
+        if (currTask->Aperiotic)// they haven't been released yet
+            currTask->released = false;
     }
 
     sort(tasks);

@@ -19,10 +19,12 @@ void sort(vector<Task*> &list)// will sort the array by priority (initial period
         longestPeriodIndex = i;
         shortestPeriodIndex = i;
         for(int j= i; j<list.size(); j++){
-            if(list[j]->period < list[shortestPeriodIndex]->currentDeadline){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
+            //if(list[j]->period < list[shortestPeriodIndex]->currentDeadline){ //list[j] has a higher priority than list[shortestPeriodIndex] and has the shortest period so far.
+            if(list[j]->currentDeadline < list[shortestPeriodIndex]->currentDeadline){   
                 shortestPeriodIndex = j;
             }
-            else if(list[j]->period > list[longestPeriodIndex]->currentDeadline){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
+            //else if(list[j]->period > list[longestPeriodIndex]->currentDeadline){//list[j] has a lower priority than list[longestPeriodIndex] and has the longest period so far
+            else if(list[j]->currentDeadline > list[longestPeriodIndex]->currentDeadline){   
                 longestPeriodIndex = j;
             }
         }

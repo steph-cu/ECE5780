@@ -56,3 +56,60 @@ E - got preempted: 0 times, - missed its deadline: 0 times
 B - got preempted: 0 times, - missed its deadline: 0 times 
 Total number of preemptions for RMA: 0
 Total number of deadline misses for RMA: 0
+************ EDF SCHEDULE ************
+0 - C is scheduled
+1 - C is scheduled
+2 - D is scheduled
+3 - A is scheduled
+4 - E is scheduled
+5 - B is scheduled
+6
+7
+8
+9
+10
+11 - D is scheduled
+12 - C is scheduled
+13 - C is scheduled
+14
+15
+16
+17
+18
+19
+20 - C is scheduled
+21 - C is scheduled
+22 - D is scheduled
+23
+24
+25
+26 - E is scheduled
+27 - A is scheduled
+28
+29
+30
+31 - D is scheduled
+32 - C is scheduled
+33 - C is scheduled
+34
+35
+36
+37
+38
+39
+40 - C is scheduled
+41 - C is scheduled
+42 - D is scheduled
+43
+44
+45
+46
+47
+48
+49
+D - missed its deadline: 0 times 
+C - missed its deadline: 0 times 
+B - missed its deadline: 0 times 
+E - missed its deadline: 0 times 
+A - missed its deadline: 0 times 
+Total number of deadline misses for EDF: 0

@@ -1,0 +1,625 @@
+************ RMA SCHEDULE ************
+0 - V - is scheduled
+1 - W - is scheduled
+2 - X - is scheduled
+3 - X - is scheduled
+4 - Y - is scheduled
+5 - Y - is scheduled
+6 - Z - is scheduled
+7 - Z - is scheduled
+8 - Z - is scheduled
+9 - C - is scheduled
+10 - C - Missed it's deadline - C - is scheduled - D - Missed it's deadline
+11 - C - is scheduled
+12 - D - is scheduled
+13 - E - is scheduled
+14 - E - is scheduled
+15 - A - is scheduled
+16 - A - is scheduled
+17 - B - is scheduled
+18 - B - is scheduled
+19 - B - is scheduled
+20 - C - is scheduled - B - has been preempted by C
+21 - C - is scheduled - B - has been preempted by C
+22 - D - is scheduled - B - has been preempted by D
+23 - E - is scheduled - B - has been preempted by E
+24 - E - is scheduled - B - has been preempted by E
+25 - B - is scheduled
+26
+27
+28
+29
+30 - C - is scheduled
+31 - C - is scheduled
+32 - D - is scheduled
+33 - A - is scheduled
+34 - A - is scheduled
+35
+36
+37
+38
+39
+40 - C - is scheduled
+41 - C - is scheduled
+42 - D - is scheduled
+43 - E - is scheduled
+44 - E - is scheduled
+45
+46
+47
+48
+49
+50 - C - is scheduled
+51 - C - is scheduled
+52 - D - is scheduled
+53 - B - is scheduled
+54 - B - is scheduled
+55 - B - is scheduled
+56 - B - is scheduled
+57
+58
+59
+60 - C - is scheduled
+61 - C - is scheduled
+62 - D - is scheduled
+63 - E - is scheduled
+64 - E - is scheduled
+65 - A - is scheduled
+66 - A - is scheduled
+67
+68
+69
+70 - C - is scheduled
+71 - C - is scheduled
+72 - D - is scheduled
+73
+74
+75
+76
+77
+78
+79
+80 - C - is scheduled
+81 - C - is scheduled
+82 - D - is scheduled
+83 - E - is scheduled
+84 - E - is scheduled
+85
+86
+87
+88
+89
+90 - C - is scheduled
+91 - C - is scheduled
+92 - D - is scheduled
+93 - A - is scheduled
+94 - A - is scheduled
+95
+96
+97
+98
+99
+100 - C - is scheduled
+101 - C - is scheduled
+102 - D - is scheduled
+103 - E - is scheduled
+104 - E - is scheduled
+105 - B - is scheduled
+106 - B - is scheduled
+107 - B - is scheduled
+108 - B - is scheduled
+109
+110 - C - is scheduled
+111 - C - is scheduled
+112 - D - is scheduled
+113
+114
+115
+116
+117
+118
+119
+120 - C - is scheduled
+121 - C - is scheduled
+122 - D - is scheduled
+123 - E - is scheduled
+124 - E - is scheduled
+125 - A - is scheduled
+126 - A - is scheduled
+127
+128
+129
+130 - C - is scheduled
+131 - C - is scheduled
+132 - D - is scheduled
+133
+134
+135
+136
+137
+138
+139
+140 - C - is scheduled
+141 - C - is scheduled
+142 - D - is scheduled
+143 - E - is scheduled
+144 - E - is scheduled
+145
+146
+147
+148
+149
+150 - C - is scheduled
+151 - C - is scheduled
+152 - D - is scheduled
+153 - A - is scheduled
+154 - A - is scheduled
+155 - B - is scheduled
+156 - B - is scheduled
+157 - B - is scheduled
+158 - B - is scheduled
+159
+160 - C - is scheduled
+161 - C - is scheduled
+162 - D - is scheduled
+163 - E - is scheduled
+164 - E - is scheduled
+165
+166
+167
+168
+169
+170 - C - is scheduled
+171 - C - is scheduled
+172 - D - is scheduled
+173
+174
+175
+176
+177
+178
+179
+180 - C - is scheduled
+181 - C - is scheduled
+182 - D - is scheduled
+183 - E - is scheduled
+184 - E - is scheduled
+185 - A - is scheduled
+186 - A - is scheduled
+187
+188
+189
+190 - C - is scheduled
+191 - C - is scheduled
+192 - D - is scheduled
+193
+194
+195
+196
+197
+198
+199
+200 - C - is scheduled
+201 - C - is scheduled
+202 - D - is scheduled
+203 - E - is scheduled
+204 - E - is scheduled
+205 - B - is scheduled
+206 - B - is scheduled
+207 - B - is scheduled
+208 - B - is scheduled
+209
+210 - C - is scheduled
+211 - C - is scheduled
+212 - D - is scheduled
+213 - A - is scheduled
+214 - A - is scheduled
+215
+216
+217
+218
+219
+220 - C - is scheduled
+221 - C - is scheduled
+222 - D - is scheduled
+223 - E - is scheduled
+224 - E - is scheduled
+225
+226
+227
+228
+229
+230 - C - is scheduled
+231 - C - is scheduled
+232 - D - is scheduled
+233
+234
+235
+236
+237
+238
+239
+240 - C - is scheduled
+241 - C - is scheduled
+242 - D - is scheduled
+243 - E - is scheduled
+244 - E - is scheduled
+245 - A - is scheduled
+246 - A - is scheduled
+247
+248
+249
+250 - C - is scheduled
+251 - C - is scheduled
+252 - D - is scheduled
+253 - B - is scheduled
+254 - B - is scheduled
+255 - B - is scheduled
+256 - B - is scheduled
+257
+258
+259
+260 - C - is scheduled
+261 - C - is scheduled
+262 - D - is scheduled
+263 - E - is scheduled
+264 - E - is scheduled
+265
+266
+267
+268
+269
+270 - C - is scheduled
+271 - C - is scheduled
+272 - D - is scheduled
+273 - A - is scheduled
+274 - A - is scheduled
+275
+276
+277
+278
+279
+280 - C - is scheduled
+281 - C - is scheduled
+282 - D - is scheduled
+283 - E - is scheduled
+284 - E - is scheduled
+285
+286
+287
+288
+289
+290 - C - is scheduled
+291 - C - is scheduled
+292 - D - is scheduled
+293
+294
+295
+296
+297
+298
+299
+V - got preempted: 0 times, - missed its deadline: 0 times 
+W - got preempted: 0 times, - missed its deadline: 0 times 
+X - got preempted: 0 times, - missed its deadline: 0 times 
+Y - got preempted: 0 times, - missed its deadline: 0 times 
+Z - got preempted: 0 times, - missed its deadline: 0 times 
+C - got preempted: 0 times, - missed its deadline: 1 times 
+D - got preempted: 0 times, - missed its deadline: 1 times 
+E - got preempted: 0 times, - missed its deadline: 0 times 
+A - got preempted: 0 times, - missed its deadline: 0 times 
+B - got preempted: 5 times, - missed its deadline: 0 times 
+Total number of preemptions for RMA: 5
+Total number of deadline misses for RMA: 2
+************ EDF SCHEDULE ************
+0 - V is scheduled
+1 - W is scheduled
+2 - X is scheduled
+3 - X is scheduled
+4 - Y is scheduled
+5 - Y is scheduled
+6 - Z is scheduled
+7 - Z is scheduled
+8 - Z is scheduled
+9 - C is scheduled
+10 - C missed its deadline - D missed its deadline - C is scheduled
+11 - C is scheduled
+12 - D is scheduled
+13 - E is scheduled
+14 - E is scheduled
+15 - A is scheduled
+16 - A is scheduled
+17 - B is scheduled
+18 - B is scheduled
+19 - B is scheduled
+20 - B is scheduled
+21 - C is scheduled
+22 - C is scheduled
+23 - D is scheduled
+24 - E is scheduled
+25 - E is scheduled
+26
+27
+28
+29
+30
+31 - C is scheduled
+32 - C is scheduled
+33 - D is scheduled
+34 - A is scheduled
+35 - A is scheduled
+36
+37
+38
+39
+40
+41 - D is scheduled
+42 - C is scheduled
+43 - C is scheduled
+44 - E is scheduled
+45 - E is scheduled
+46
+47
+48
+49
+50
+51 - D is scheduled
+52 - C is scheduled
+53 - C is scheduled
+54 - B is scheduled
+55 - B is scheduled
+56 - B is scheduled
+57 - B is scheduled
+58
+59
+60
+61 - D is scheduled
+62 - C is scheduled
+63 - C is scheduled
+64 - E is scheduled
+65 - E is scheduled
+66 - A is scheduled
+67 - A is scheduled
+68
+69
+70
+71 - C is scheduled
+72 - C is scheduled
+73 - D is scheduled
+74
+75
+76
+77
+78
+79
+80 - D is scheduled
+81 - C is scheduled
+82 - C is scheduled
+83 - E is scheduled
+84 - E is scheduled
+85
+86
+87
+88
+89
+90
+91 - C is scheduled
+92 - C is scheduled
+93 - D is scheduled
+94 - A is scheduled
+95 - A is scheduled
+96
+97
+98
+99
+100
+101 - C is scheduled
+102 - C is scheduled
+103 - D is scheduled
+104 - E is scheduled
+105 - E is scheduled
+106 - B is scheduled
+107 - B is scheduled
+108 - B is scheduled
+109 - B is scheduled
+110
+111 - D is scheduled
+112 - C is scheduled
+113 - C is scheduled
+114
+115
+116
+117
+118
+119
+120 - C is scheduled
+121 - C is scheduled
+122 - D is scheduled
+123 - E is scheduled
+124 - E is scheduled
+125 - A is scheduled
+126 - A is scheduled
+127
+128
+129
+130
+131 - D is scheduled
+132 - C is scheduled
+133 - C is scheduled
+134
+135
+136
+137
+138
+139
+140 - C is scheduled
+141 - C is scheduled
+142 - D is scheduled
+143 - E is scheduled
+144 - E is scheduled
+145
+146
+147
+148
+149
+150
+151 - D is scheduled
+152 - C is scheduled
+153 - C is scheduled
+154 - A is scheduled
+155 - A is scheduled
+156 - B is scheduled
+157 - B is scheduled
+158 - B is scheduled
+159 - B is scheduled
+160
+161 - D is scheduled
+162 - C is scheduled
+163 - C is scheduled
+164 - E is scheduled
+165 - E is scheduled
+166
+167
+168
+169
+170
+171 - C is scheduled
+172 - C is scheduled
+173 - D is scheduled
+174
+175
+176
+177
+178
+179
+180 - D is scheduled
+181 - C is scheduled
+182 - C is scheduled
+183 - E is scheduled
+184 - E is scheduled
+185 - A is scheduled
+186 - A is scheduled
+187
+188
+189
+190
+191 - C is scheduled
+192 - C is scheduled
+193 - D is scheduled
+194
+195
+196
+197
+198
+199
+200 - D is scheduled
+201 - C is scheduled
+202 - C is scheduled
+203 - E is scheduled
+204 - E is scheduled
+205 - B is scheduled
+206 - B is scheduled
+207 - B is scheduled
+208 - B is scheduled
+209
+210
+211 - C is scheduled
+212 - C is scheduled
+213 - D is scheduled
+214 - A is scheduled
+215 - A is scheduled
+216
+217
+218
+219
+220
+221 - C is scheduled
+222 - C is scheduled
+223 - D is scheduled
+224 - E is scheduled
+225 - E is scheduled
+226
+227
+228
+229
+230
+231 - D is scheduled
+232 - C is scheduled
+233 - C is scheduled
+234
+235
+236
+237
+238
+239
+240 - C is scheduled
+241 - C is scheduled
+242 - D is scheduled
+243 - E is scheduled
+244 - E is scheduled
+245 - A is scheduled
+246 - A is scheduled
+247
+248
+249
+250
+251 - C is scheduled
+252 - C is scheduled
+253 - D is scheduled
+254 - B is scheduled
+255 - B is scheduled
+256 - B is scheduled
+257 - B is scheduled
+258
+259
+260
+261 - D is scheduled
+262 - C is scheduled
+263 - C is scheduled
+264 - E is scheduled
+265 - E is scheduled
+266
+267
+268
+269
+270
+271 - C is scheduled
+272 - C is scheduled
+273 - D is scheduled
+274 - A is scheduled
+275 - A is scheduled
+276
+277
+278
+279
+280
+281 - C is scheduled
+282 - C is scheduled
+283 - D is scheduled
+284 - E is scheduled
+285 - E is scheduled
+286
+287
+288
+289
+290
+291 - D is scheduled
+292 - C is scheduled
+293 - C is scheduled
+294
+295
+296
+297
+298
+299
+C - missed its deadline: 2 times 
+V - missed its deadline: 0 times 
+W - missed its deadline: 0 times 
+X - missed its deadline: 0 times 
+Y - missed its deadline: 0 times 
+Z - missed its deadline: 0 times 
+D - missed its deadline: 2 times 
+A - missed its deadline: 0 times 
+E - missed its deadline: 0 times 
+B - missed its deadline: 0 times 
+Total number of deadline misses for EDF: 4

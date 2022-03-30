@@ -1,0 +1,58 @@
+************ RMA SCHEDULE ************
+0 - C - is scheduled
+1 - C - is scheduled
+2 - D - is scheduled
+3 - A - is scheduled
+4 - E - is scheduled
+5 - B - is scheduled
+6
+7
+8
+9
+10 - C - is scheduled
+11 - C - is scheduled
+12 - D - is scheduled
+13
+14
+15
+16
+17
+18
+19
+20 - C - is scheduled
+21 - C - is scheduled
+22 - D - is scheduled
+23
+24
+25 - A - is scheduled
+26 - E - is scheduled
+27
+28
+29
+30 - C - is scheduled
+31 - C - is scheduled
+32 - D - is scheduled
+33
+34
+35
+36
+37
+38
+39
+40 - C - is scheduled
+41 - C - is scheduled
+42 - D - is scheduled
+43
+44
+45
+46
+47
+48
+49
+C - got preempted: 0 times, - missed its deadline: 0 times 
+D - got preempted: 0 times, - missed its deadline: 0 times 
+A - got preempted: 0 times, - missed its deadline: 0 times 
+E - got preempted: 0 times, - missed its deadline: 0 times 
+B - got preempted: 0 times, - missed its deadline: 0 times 
+Total number of preemptions for RMA: 0
+Total number of deadline misses for RMA: 0

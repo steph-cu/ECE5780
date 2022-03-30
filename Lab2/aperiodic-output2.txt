@@ -1,55 +1,55 @@
 ************ RMA SCHEDULE ************
-0 - V - is scheduled
-1 - W - is scheduled
-2 - X - is scheduled
-3 - X - is scheduled
-4 - Y - is scheduled
-5 - Y - is scheduled
-6 - Z - is scheduled
-7 - Z - is scheduled
-8 - Z - is scheduled
-9 - C - is scheduled
-10 - C - Missed it's deadline - C - is scheduled - D - Missed it's deadline
-11 - C - is scheduled
-12 - C - is scheduled
-13 - D - is scheduled
-14 - D - is scheduled
-15 - D - is scheduled
-16 - D - is scheduled
-17 - A - is scheduled
+0 - C - is scheduled
+1 - C - is scheduled
+2 - C - is scheduled
+3 - D - is scheduled
+4 - D - is scheduled
+5 - V - is scheduled - D - has been preempted by V
+6 - D - is scheduled
+7 - D - is scheduled
+8 - A - is scheduled
+9 - A - is scheduled
+10 - C - is scheduled - A - has been preempted by C
+11 - C - is scheduled - A - has been preempted by C
+12 - C - is scheduled - A - has been preempted by C
+13 - D - is scheduled - A - has been preempted by D
+14 - D - is scheduled - A - has been preempted by D
+15 - D - is scheduled - A - has been preempted by D
+16 - D - is scheduled - A - has been preempted by D
+17 - W - is scheduled - A - has been preempted by W
 18 - A - is scheduled
 19 - A - is scheduled
 20 - C - is scheduled - A - has been preempted by C
 21 - C - is scheduled - A - has been preempted by C
 22 - C - is scheduled - A - has been preempted by C
-23 - D - is scheduled - A - has been preempted by D
-24 - D - is scheduled - A - has been preempted by D
+23 - X - is scheduled - A - has been preempted by X
+24 - X - is scheduled - A - has been preempted by X
 25 - D - is scheduled - A - Missed it's deadline - E - Missed it's deadline
-26 - D - is scheduled
-27 - A - is scheduled
-28 - A - is scheduled
-29 - A - is scheduled
-30 - C - is scheduled - A - has been preempted by C
-31 - C - is scheduled - A - has been preempted by C
-32 - C - is scheduled - A - has been preempted by C
-33 - D - is scheduled - A - has been preempted by D
-34 - D - is scheduled - A - has been preempted by D
-35 - D - is scheduled - A - has been preempted by D
-36 - D - is scheduled - A - has been preempted by D
-37 - A - is scheduled
-38 - A - is scheduled
-39 - E - is scheduled
-40 - C - is scheduled - E - has been preempted by C
-41 - C - is scheduled - E - has been preempted by C
-42 - C - is scheduled - E - has been preempted by C
-43 - D - is scheduled - E - has been preempted by D
-44 - D - is scheduled - E - has been preempted by D
-45 - D - is scheduled - E - has been preempted by D
-46 - D - is scheduled - E - has been preempted by D
-47 - E - is scheduled
-48 - E - is scheduled
-49 - E - is scheduled
-50 - C - is scheduled - E - Missed it's deadline - B - Missed it's deadline
+26 - Y - is scheduled - D - has been preempted by Y
+27 - Y - is scheduled - D - has been preempted by Y
+28 - D - is scheduled
+29 - D - is scheduled
+30 - C - is scheduled - D - Missed it's deadline
+31 - C - is scheduled
+32 - C - is scheduled
+33 - D - is scheduled
+34 - Z - is scheduled - D - has been preempted by Z
+35 - Z - is scheduled - D - has been preempted by Z
+36 - Z - is scheduled - D - has been preempted by Z
+37 - D - is scheduled
+38 - D - is scheduled
+39 - D - is scheduled
+40 - C - is scheduled
+41 - C - is scheduled
+42 - C - is scheduled
+43 - D - is scheduled
+44 - D - is scheduled
+45 - D - is scheduled
+46 - D - is scheduled
+47 - A - is scheduled
+48 - A - is scheduled
+49 - A - is scheduled
+50 - C - is scheduled - A - Missed it's deadline - E - Missed it's deadline - B - Missed it's deadline
 51 - C - is scheduled
 52 - C - is scheduled
 53 - D - is scheduled
@@ -99,70 +99,70 @@
 97 - E - is scheduled
 98 - E - is scheduled
 99 - E - is scheduled
+C - got preempted: 0 times, - missed its deadline: 0 times 
+D - got preempted: 6 times, - missed its deadline: 1 times 
+A - got preempted: 27 times, - missed its deadline: 2 times 
+E - got preempted: 12 times, - missed its deadline: 3 times 
+B - got preempted: 0 times, - missed its deadline: 1 times 
 V - got preempted: 0 times, - missed its deadline: 0 times 
 W - got preempted: 0 times, - missed its deadline: 0 times 
 X - got preempted: 0 times, - missed its deadline: 0 times 
 Y - got preempted: 0 times, - missed its deadline: 0 times 
 Z - got preempted: 0 times, - missed its deadline: 0 times 
-C - got preempted: 0 times, - missed its deadline: 1 times 
-D - got preempted: 0 times, - missed its deadline: 1 times 
-A - got preempted: 26 times, - missed its deadline: 1 times 
-E - got preempted: 19 times, - missed its deadline: 3 times 
-B - got preempted: 0 times, - missed its deadline: 1 times 
 Total number of preemptions for RMA: 45
 Total number of deadline misses for RMA: 7
 ************ EDF SCHEDULE ************
-0 - V is scheduled
-1 - W is scheduled
-2 - X is scheduled
-3 - X is scheduled
-4 - Y is scheduled
-5 - Y is scheduled
-6 - Z is scheduled
-7 - Z is scheduled
-8 - Z is scheduled
-9 - C is scheduled
-10 - C missed its deadline - D missed its deadline - C is scheduled
-11 - C is scheduled
-12 - C is scheduled
-13 - D is scheduled
-14 - D is scheduled
-15 - D is scheduled
+0 - C is scheduled
+1 - C is scheduled
+2 - C is scheduled
+3 - D is scheduled
+4 - D is scheduled
+5 - D is scheduled
+6 - D is scheduled
+7 - V is scheduled
+8 - E is scheduled
+9 - E is scheduled
+10 - E is scheduled
+11 - E is scheduled
+12 - E is scheduled
+13 - C is scheduled
+14 - C is scheduled
+15 - C is scheduled
 16 - D is scheduled
-17 - A is scheduled
-18 - A is scheduled
-19 - A is scheduled
-20 - A is scheduled
+17 - D is scheduled
+18 - D is scheduled
+19 - D is scheduled
+20 - W is scheduled
 21 - A is scheduled
-22 - E is scheduled
-23 - E is scheduled
-24 - E is scheduled
-25 - E missed its deadline - E is scheduled
-26 - E is scheduled
-27 - E is scheduled
-28 - E is scheduled
-29 - E is scheduled
-30 - D missed its deadline - C missed its deadline - D is scheduled
-31 - D is scheduled
-32 - D is scheduled
-33 - D is scheduled
-34 - C is scheduled
-35 - C is scheduled
-36 - C is scheduled
-37 - B is scheduled
-38 - B is scheduled
-39 - B is scheduled
-40 - B is scheduled
-41 - C is scheduled
-42 - C is scheduled
-43 - C is scheduled
-44 - A is scheduled
-45 - A is scheduled
-46 - A is scheduled
-47 - A is scheduled
-48 - A is scheduled
-49 - D is scheduled
-50 - D missed its deadline - D is scheduled
+22 - A is scheduled
+23 - A is scheduled
+24 - A is scheduled
+25 - A missed its deadline - A is scheduled
+26 - A is scheduled
+27 - A is scheduled
+28 - A is scheduled
+29 - A is scheduled
+30 - D missed its deadline - C missed its deadline - X is scheduled
+31 - X is scheduled
+32 - Y is scheduled
+33 - Y is scheduled
+34 - D is scheduled
+35 - D is scheduled
+36 - D is scheduled
+37 - D is scheduled
+38 - Z is scheduled
+39 - Z is scheduled
+40 - C missed its deadline - Z is scheduled
+41 - E is scheduled
+42 - E is scheduled
+43 - E is scheduled
+44 - E is scheduled
+45 - E is scheduled
+46 - B is scheduled
+47 - B is scheduled
+48 - B is scheduled
+49 - B is scheduled
+50 - D missed its deadline - C missed its deadline - D is scheduled
 51 - D is scheduled
 52 - D is scheduled
 53 - D is scheduled
@@ -212,14 +212,14 @@ Total number of deadline misses for RMA: 7
 97 - A is scheduled
 98 - A is scheduled
 99 - A is scheduled
-E - missed its deadline: 4 times 
-V - missed its deadline: 0 times 
+E - missed its deadline: 3 times 
 W - missed its deadline: 0 times 
 X - missed its deadline: 0 times 
+V - missed its deadline: 0 times 
 Y - missed its deadline: 0 times 
-Z - missed its deadline: 0 times 
 C - missed its deadline: 4 times 
-A - missed its deadline: 1 times 
-D - missed its deadline: 4 times 
+A - missed its deadline: 3 times 
+D - missed its deadline: 3 times 
 B - missed its deadline: 1 times 
+Z - missed its deadline: 0 times 
 Total number of deadline misses for EDF: 14

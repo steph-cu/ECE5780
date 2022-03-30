@@ -45,17 +45,29 @@ void sort(vector<Task*> &list)// will sort the array by priority (initial period
 void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
 {// not sure where to put the aperiotic (whether they need to be top or low priority) {I prefer top, so before everything else}
     outputFile << "************ RMA SCHEDULE ************" << endl;
+    for(int currTaskIndex = 0; currTaskIndex < taskList.size(); currTaskIndex++  ){
+        if(taskList.at(currTaskIndex)->Aperiotic){
+            for(int currTimingIndex = taskList.at(currTaskIndex)->period; currTimingIndex < taskList.at(currTaskIndex)->period + taskList.at(currTaskIndex)->executionTime ; currTimingIndex++){
+                timing.at(currTimingIndex ) = taskList.at(currTaskIndex)->id;
+                taskList.at(currTaskIndex)->released == false;
+            }
+        }
+    }
+    sort(taskList);
     for(int currTimingIndex = 0; currTimingIndex<timing.size(); currTimingIndex++) // start looking at each timing segment then decide on what goes into that timing segment
-    {
-        outputFile << currTimingIndex;
+    { 
         string& currTiming = timing.at(currTimingIndex);
+        outputFile << currTimingIndex ;
+        if(currTiming != ""){
+            outputFile << " - " << currTiming << " - is scheduled";
+        } 
         for(int currTaskIndex = 0; currTaskIndex < taskList.size(); currTaskIndex++){ // look at each task and decide if it should go into that timing segment.
             Task* currTask = taskList.at(currTaskIndex);
             // check each task if it's passed it's deadline to see if it got missed or if it needs to be reset.
             if(currTimingIndex >= currTask->currentDeadline && ((currTask->currentExecutionCounter != 0 && currTask->released == false) || (currTask->released == true))){ // it missed the deadline
                 currTask->numMissedDeadlines += 1;
                 outputFile << " - " << currTask->id << " - Missed it's deadline";
-                currTask->released = false; // resets the task when it misses a deadline.
+                currTask->released = false; // makes the task ready to be setup when it misses a deadline.
                 currTask->currentExecutionCounter = 0;
             }
             
@@ -63,18 +75,13 @@ void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
                 if(currTask->Aperiotic == true){
                     continue;
                 } 
-                currTask->released = true;
+                currTask->released = true; //makes the task ready
                 currTask->numExecutions += 1; 
                 currTask->currentDeadline += currTask->period; // set the next deadline
             }
 
-            if(currTask->released == false && currTask->currentExecutionCounter == 0){ //if it is not ready to execute and hasn't been preempted
-
-                continue;
-            }
-
             if(currTiming != ""){ //if something has been scheduled, it was put there by a higher priority task and go on to the next timing segment.
-                if(currTask->currentExecutionCounter != 0){
+                if(currTask->currentExecutionCounter != 0){ //|| currTask->released == true
                     outputFile  << " - " << currTask->id << " - has been preempted by " << currTiming;
                     currTask->numPreemptions += 1;
                 }
@@ -115,6 +122,9 @@ void update(vector<Task*> &tasks, int time, ofstream &outputFile)
     for (int currTaskIndex  = 0; currTaskIndex < tasks.size(); currTaskIndex++)
     {
         Task* currTask = tasks.at(currTaskIndex);
+        if(time >= currTask->period && currTask->Aperiotic && currTask->currentExecutionCounter == 0){
+            currTask->released = true;
+        }
         if (time >= currTask->currentDeadline && (currTask->released == true || (currTask->currentExecutionCounter  > 0 && currTask->currentExecutionCounter != currTask->executionTime)) && currTask->Aperiotic == false)
         {
             outputFile << " - " << currTask->id << " missed its deadline";
@@ -230,6 +240,7 @@ int main(int argc, char const *argv[])
             int len = place2 - 1 - place1;
             newTask->executionTime = stoi(line.substr(place1+1,len));
             newTask->Aperiotic = true;
+            newTask->released = false;
             newTask->period = stoi(line.substr(place2+1));// period will act as release time for aperiodic
             newTask->currentDeadline = totDuration;
             tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
@@ -256,6 +267,9 @@ int main(int argc, char const *argv[])
         currTask->numExecutions = 0;
         currTask->numPreemptions = 0;
         currTask->released = true;
+        if(currTask->Aperiotic){
+            currTask->released = false;
+        }
     }
 
     sort(tasks);

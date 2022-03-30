@@ -13,7 +13,6 @@ using namespace std;
 void sort(vector<Task*> &list)// will sort the array by priority (initial period) puts the highest priority/shortest period into the 0 position
 {    
     int shortestPeriodIndex=0;
-    //int lastPriority = list.size() - 1;
     Task *temp;
     for(int i =0; i<list.size(); i++){
         shortestPeriodIndex = i;
@@ -113,42 +112,29 @@ void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
 
 void update(vector<Task*> &tasks, int time, ofstream &outputFile)
 {
-    cout << "we be updating" << endl;
     for (int currTaskIndex  = 0; currTaskIndex < tasks.size(); currTaskIndex++)
     {
         Task* currTask = tasks.at(currTaskIndex);
-        cout << time << " - " << currTask->id << " - " << currTask->currentDeadline << " - Released: " << currTask->released << " - Deadline: " << currTask->currentDeadline << " - " << currTask->currentExecutionCounter << endl;
         if (time >= currTask->currentDeadline && (currTask->released == true || (currTask->currentExecutionCounter  > 0 && currTask->currentExecutionCounter != currTask->executionTime)) && currTask->Aperiotic == false)
         {
-            cout << currTask->id << " missed its Deadline!" << endl;
             outputFile << " - " << currTask->id << " missed its deadline";
             currTask->currentExecutionCounter = 0;
             currTask->numMissedDeadlines += 1;
-            currTask->currentDeadline += currTask->period;
+            currTask->currentDeadline += currTask->period; // end it and just go to the next deadline.
             currTask->released = true;
         }
         else if (time >= currTask->currentDeadline && currTask->Aperiotic == false)
         {
-            cout << "releaseing: " << currTask->id << endl;
             currTask->currentDeadline += currTask->period;
             currTask->released = true;
             currTask->currentExecutionCounter = 0;
-            //list[i].currentPeriod += list[i].period; // if we decide to skip missed deadlines
         }
     }
     sort(tasks);
-    for(int i = 0; i< tasks.size(); i++){
-        cout << tasks.at(i)->id << " - ";
-    }
-    cout << endl;
-    for(int i = 0; i< tasks.size(); i++){
-        cout << time << " - " << tasks.at(i)->id << " - " << tasks.at(i)->currentDeadline << " - Released: " << tasks.at(i)->released << " - Deadline: " << tasks.at(i)->currentDeadline << endl;
-    }
 }
 
 void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
 {
-    cout << "made it to EDF" << endl;
     outputFile << "************ EDF SCHEDULE ************" << endl;
     int consecutive = 0;
     sort(tasks);
@@ -156,62 +142,20 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
     currTask->currentExecutionCounter = 0;
     for (int currTimeIndex = 0; currTimeIndex < timing2.size(); currTimeIndex++)// We go through each point 
     {
-        //sort(tasks);
-        cout << "NEW TIMING*********************************************************************" << endl;
-        for(int i = 0; i< tasks.size(); i++){
-            cout << tasks.at(i)->id << "-";
-        }
-        cout << endl;
         outputFile << currTimeIndex;
-        cout << currTimeIndex << " - " << currTask->id << " - " << currTask->executionTime << " - " << currTimeIndex  <<  endl;
         update(tasks, currTimeIndex, outputFile);
-        
-        if(currTask->released == true){//we're starting to execute
-            //currTask->released = false;
+        if(currTask->released == true){//we're executing
             currTask->currentExecutionCounter++;
             timing2.at(currTimeIndex) = currTask->id;
             outputFile << " - " << currTask->id << " is scheduled";
             consecutive++;
         }
-        // else if(currTask->currentExecutionCounter < currTask->executionTime){
-        //     currTask->released = false;
-        //     currTask->currentExecutionCounter++;
-        //     timing2.at(currTimeIndex) = currTask->id;
-        //     outputFile << " - " << currTask->id << " is scheduled";
-        //     consecutive++;
-        // }
-        if(currTask->currentExecutionCounter >= currTask->executionTime){
+        if(currTask->currentExecutionCounter >= currTask->executionTime){ // we're done executing
             currTask->released = false;
             consecutive = 0;
-            //currTask->currentExecutionCounter = 0;
             update(tasks, currTimeIndex, outputFile);
-            cout << "changing tasks" << endl;
             currTask = tasks.at(0);
         }
-
-        // if(currTask->released == true){
-        //     currTask->currentExecutionCounter++;
-        //     timing2.at(currTimeIndex) = currTask->id;
-        //     outputFile << " - " << currTask->id;
-        //     consecutive++;
-            
-        // }
-        // if (consecutive >= currTask->executionTime)// runs with expectation of FIFO then updates accordingly
-        // {
-        //     currTask->currentExecutionCounter++;
-        //     currTask->released = false;   
-        //     consecutive = 0;
-        //     update(tasks, currTimeIndex, outputFile);
-        //     currTask = tasks.at(0); //once that task is done executing then we update which one is the current task.
-        
-        // }
-        
-        for (int currTimeIndex = 0; currTimeIndex < timing2.size(); currTimeIndex++)// We go through each point 
-        {
-            cout << timing2.at(currTimeIndex) << " - "; 
-        }
-
-        cout << endl;
         outputFile << endl;
     }
     int totalDeadlineMisses = 0;
@@ -220,10 +164,8 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
         Task* currTask = tasks.at(currTaskIndex);
         totalDeadlineMisses += currTask->numMissedDeadlines;
         totalPreemptions += currTask->numPreemptions;
-        //cout << currTask->id << " - executed: " << currTask->numExecutions << " times, - got preempted: " << currTask->numPreemptions << " times, - missed its deadline: " << currTask->numMissedDeadlines << " times " << endl;
         outputFile << currTask->id << " - missed its deadline: " << currTask->numMissedDeadlines << " times "<< endl;
     }
-    //outputFile << "Total number of preemptions for EDF: " << totalPreemptions << endl;
     outputFile << "Total number of deadline misses for EDF: " << totalDeadlineMisses << endl;
 }
 
@@ -265,7 +207,6 @@ int main(int argc, char const *argv[])
         }
         else if(!onAperiodic && whileCount < numTasks + 2){
             //line will look like "A,10,200"
-            //cout << "reading in the periodic tasks:)" << endl;
             Task* newTask = new Task(); // parse through the line to get the correct id executionTime and period
             int place1 = line.find(',',0);
             newTask->id = line.substr(0,place1);
@@ -277,69 +218,34 @@ int main(int argc, char const *argv[])
             tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
         }
         else if(whileCount == numTasks + 2){// will start getting 
-            //cout << "is something happening here?" << endl;
             onAperiodic = true;
             numTasks += stoi(line)+1;
         }
         else//****************NEW FOR SETTING UP APERIODIC TASK*********************
         {
-            //cout << "reading in:" << line << endl;
             Task* newTask = new Task(); // parse through the line to get the correct id executionTime and period
             int place1 = line.find(',',0);
             newTask->id = line.substr(0,place1);
-            //cout << newTask->id << endl;
             int place2 = line.find(',',place1+1);
             int len = place2 - 1 - place1;
             newTask->executionTime = stoi(line.substr(place1+1,len));
-            //cout << newTask->executionTime << endl;
             newTask->Aperiotic = true;
             newTask->period = stoi(line.substr(place2+1));// period will act as release time for aperiodic
-            //cout << newTask->period << endl;
             newTask->currentDeadline = totDuration;
             tasks.push_back(newTask); // this adds the pointer to the new task to the end of  the vector.
-            //cout << "finished reading " << newTask->id << " - " << newTask->Aperiotic << " - " << newTask->executionTime << " - " << newTask->period << endl;
         }
         whileCount += 1;
     }
 
-//    for(int j=0; j < tasks.size(); j++){
-//         cout << tasks[j]->id << " - " << tasks[j]->executionTime << " - " << tasks[j]->period << " - " << tasks[j]->released << endl;
-//     }
     
     vector <string> timing;
     timing.resize(totDuration);
     vector <string> timing2;
     timing2.resize(totDuration);
 
-    //cout << "made it here in the execution" << endl;
-
-    // for(int j=0; j < tasks.size(); j++){
-    //     cout << tasks[j]->id << " - " << &tasks[j] << endl;
-    // }
-    // string *testString = new string(""); // to test to see if the string is empty create a testString
-    // for(int j=0; j < timing.size(); j += 100){
-    //     cout << timing[j] << " - " << &timing[j] << " - " << (timing[j] == *testString)  << " - " << j << " - " << timing.size()  <<  endl;
-    // }
-
-
     sort(tasks);
 
-    cout << "made it after the sort" << endl;
-    for(int j=0; j < tasks.size(); j++){
-        cout << tasks[j]->id << " - " << tasks[j]->executionTime << " - " << tasks[j]->period << " - " << tasks[j]->released << endl;
-    }
-
     RMA(tasks, timing, outputFile);
-
-    cout << "made it past RMA" << endl;
-
-    for(int q = 0; q < timing.size(); q++){
-        cout << timing.at(q) << "-";
-        if (q%50 == 0 && q !=0){
-            cout << endl;
-        }
-    }
-    cout << endl;
     
    for(int i = 0; i<tasks.size(); i++){
         Task* currTask = tasks.at(i);
@@ -350,24 +256,11 @@ int main(int argc, char const *argv[])
         currTask->numExecutions = 0;
         currTask->numPreemptions = 0;
         currTask->released = true;
-        // if (currTask->Aperiotic){// they haven't been released yet
-        //     currTask->released = false;
-        // }
     }
 
     sort(tasks);
 
-    cout << "EDF*****************************************************************************" << endl;
-
     EDF(tasks, timing2, outputFile);
-
-    for(int q = 0; q<timing2.size(); q++){
-        cout << timing2.at(q) << " - ";
-
-    }
-    cout << endl;
-    
-    cout << "made it past edf" << endl;
 
     tasks.clear();
     tasks.resize(0);

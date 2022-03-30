@@ -112,114 +112,114 @@ B - got preempted: 0 times, - missed its deadline: 1 times
 Total number of preemptions for RMA: 45
 Total number of deadline misses for RMA: 7
 ************ EDF SCHEDULE ************
-0 - V
-1 - W
-2 - X
-3 - X
-4 - Y
-5 - Y
-6 - Z
-7 - Z
-8 - Z
-9 - C
-10 - C missed its deadline - D missed its deadline - C
-11 - C
-12 - C
-13 - D
-14 - D
-15 - D
-16 - D
-17 - A
-18 - A
-19 - A
-20 - A
-21 - A
-22 - E
-23 - E
-24 - E
-25 - E missed its deadline - E
-26 - E
-27 - E
-28 - E
-29 - E
-30 - C missed its deadline - D missed its deadline - C
-31 - C
-32 - C
-33 - D
-34 - D
-35 - D
-36 - D
-37 - B
-38 - B
-39 - B
-40 - B
-41 - A
-42 - A
-43 - A
-44 - A
-45 - A
-46 - D
-47 - D
-48 - D
-49 - D
-50 - C missed its deadline - C
-51 - C
-52 - C
-53 - D
-54 - D
-55 - D
-56 - D
-57 - E
-58 - E
-59 - E
-60 - E
-61 - E
-62 - C
-63 - C
-64 - C
-65 - D
-66 - D
-67 - D
-68 - D
-69 - A
-70 - A
-71 - A
-72 - A
-73 - A
-74 - C
-75 - C
-76 - C
-77 - D
-78 - D
-79 - D
-80 - D missed its deadline - D
-81 - D
-82 - D
-83 - D
-84 - C
-85 - C
-86 - C
-87 - A
-88 - A
-89 - A
-90 - A
-91 - A
-92 - E
-93 - E
-94 - E
-95 - E
-96 - E
-97 - C
-98 - C
-99 - C
-B - missed its deadline: 1 times 
+0 - V is scheduled
+1 - W is scheduled
+2 - X is scheduled
+3 - X is scheduled
+4 - Y is scheduled
+5 - Y is scheduled
+6 - Z is scheduled
+7 - Z is scheduled
+8 - Z is scheduled
+9 - C is scheduled
+10 - C missed its deadline - D missed its deadline - C is scheduled
+11 - C is scheduled
+12 - C is scheduled
+13 - D is scheduled
+14 - D is scheduled
+15 - D is scheduled
+16 - D is scheduled
+17 - A is scheduled
+18 - A is scheduled
+19 - A is scheduled
+20 - A is scheduled
+21 - A is scheduled
+22 - E is scheduled
+23 - E is scheduled
+24 - E is scheduled
+25 - E missed its deadline - E is scheduled
+26 - E is scheduled
+27 - E is scheduled
+28 - E is scheduled
+29 - E is scheduled
+30 - D missed its deadline - C missed its deadline - D is scheduled
+31 - D is scheduled
+32 - D is scheduled
+33 - D is scheduled
+34 - C is scheduled
+35 - C is scheduled
+36 - C is scheduled
+37 - B is scheduled
+38 - B is scheduled
+39 - B is scheduled
+40 - B is scheduled
+41 - C is scheduled
+42 - C is scheduled
+43 - C is scheduled
+44 - A is scheduled
+45 - A is scheduled
+46 - A is scheduled
+47 - A is scheduled
+48 - A is scheduled
+49 - D is scheduled
+50 - D missed its deadline - D is scheduled
+51 - D is scheduled
+52 - D is scheduled
+53 - D is scheduled
+54 - C is scheduled
+55 - C is scheduled
+56 - C is scheduled
+57 - E is scheduled
+58 - E is scheduled
+59 - E is scheduled
+60 - E is scheduled
+61 - E is scheduled
+62 - D is scheduled
+63 - D is scheduled
+64 - D is scheduled
+65 - D is scheduled
+66 - C is scheduled
+67 - C is scheduled
+68 - C is scheduled
+69 - A is scheduled
+70 - A is scheduled
+71 - A is scheduled
+72 - A is scheduled
+73 - A is scheduled
+74 - D is scheduled
+75 - D is scheduled
+76 - D is scheduled
+77 - D is scheduled
+78 - C is scheduled
+79 - C is scheduled
+80 - C missed its deadline - C is scheduled
+81 - C is scheduled
+82 - C is scheduled
+83 - D is scheduled
+84 - D is scheduled
+85 - D is scheduled
+86 - D is scheduled
+87 - B is scheduled
+88 - B is scheduled
+89 - B is scheduled
+90 - B is scheduled
+91 - D is scheduled
+92 - D is scheduled
+93 - D is scheduled
+94 - D is scheduled
+95 - A is scheduled
+96 - A is scheduled
+97 - A is scheduled
+98 - A is scheduled
+99 - A is scheduled
+E - missed its deadline: 4 times 
 V - missed its deadline: 0 times 
 W - missed its deadline: 0 times 
 X - missed its deadline: 0 times 
 Y - missed its deadline: 0 times 
 Z - missed its deadline: 0 times 
-D - missed its deadline: 4 times 
 C - missed its deadline: 4 times 
 A - missed its deadline: 1 times 
-E - missed its deadline: 4 times 
+D - missed its deadline: 4 times 
+B - missed its deadline: 1 times 
 Total number of deadline misses for EDF: 14

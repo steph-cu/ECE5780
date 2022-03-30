@@ -27,7 +27,7 @@ void sort(vector<Task*> &list)// will sort the array by priority (initial period
                         shortestPeriodIndex = j;
                 }
             }
-            else if (j == 0){
+            else if (j == 0){ // if the first spot is released, then it gets stuck and can't find the next unreleased one, this just finds the next released one.
                 for(int q = 0; q<list.size(); q++){
                     if(list[q]->released){
                         shortestPeriodIndex = q;

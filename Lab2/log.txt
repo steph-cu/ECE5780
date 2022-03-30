@@ -1,0 +1,1342 @@
+after each pass:
+C - B - A - D - E - 
+after each pass:
+C - D - A - B - E - 
+after each pass:
+C - D - A - B - E - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+made it after the sort
+C - 2 - 10 - 1
+D - 1 - 10 - 1
+A - 1 - 25 - 1
+E - 1 - 25 - 1
+B - 1 - 50 - 1
+made it past RMA
+C-C-D-A-E-B-----C-C-D--------C-C-D---A-E----C-C-D--------C-C-D--------
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+EDF*****************************************************************************
+made it to EDF
+NEW TIMING*********************************************************************
+C - D - A - E - B - 
+0 - C - 2 - 0
+we be updating
+0 - C - 10 - Released: 1 - Deadline: 10
+0 - D - 10 - Released: 1 - Deadline: 10
+0 - A - 25 - Released: 1 - Deadline: 25
+0 - E - 25 - Released: 1 - Deadline: 25
+0 - B - 50 - Released: 1 - Deadline: 50
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+after each pass:
+C - D - A - E - B - 
+C - D - A - E - B - 
+0 - C - 10 - Released: 1 - Deadline: 10
+0 - D - 10 - Released: 1 - Deadline: 10
+0 - A - 25 - Released: 1 - Deadline: 25
+0 - E - 25 - Released: 1 - Deadline: 25
+0 - B - 50 - Released: 1 - Deadline: 50
+C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - A - E - B - 
+1 - C - 2 - 1
+we be updating
+1 - C - 10 - Released: 0 - Deadline: 10
+1 - D - 10 - Released: 1 - Deadline: 10
+1 - A - 25 - Released: 1 - Deadline: 25
+1 - E - 25 - Released: 1 - Deadline: 25
+1 - B - 50 - Released: 1 - Deadline: 50
+after each pass:
+D - C - A - E - B - 
+after each pass:
+D - C - A - E - B - 
+after each pass:
+D - C - A - E - B - 
+after each pass:
+D - C - A - E - B - 
+after each pass:
+D - C - A - E - B - 
+D - C - A - E - B - 
+1 - D - 10 - Released: 1 - Deadline: 10
+1 - C - 10 - Released: 0 - Deadline: 10
+1 - A - 25 - Released: 1 - Deadline: 25
+1 - E - 25 - Released: 1 - Deadline: 25
+1 - B - 50 - Released: 1 - Deadline: 50
+C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - A - E - B - 
+2 - D - 1 - 2
+we be updating
+2 - D - 10 - Released: 0 - Deadline: 10
+2 - C - 10 - Released: 0 - Deadline: 10
+2 - A - 25 - Released: 1 - Deadline: 25
+2 - E - 25 - Released: 1 - Deadline: 25
+2 - B - 50 - Released: 1 - Deadline: 50
+after each pass:
+A - C - D - E - B - 
+after each pass:
+A - C - D - E - B - 
+after each pass:
+A - C - D - E - B - 
+after each pass:
+A - C - D - E - B - 
+after each pass:
+A - C - D - E - B - 
+A - C - D - E - B - 
+2 - A - 25 - Released: 1 - Deadline: 25
+2 - C - 10 - Released: 0 - Deadline: 10
+2 - D - 10 - Released: 0 - Deadline: 10
+2 - E - 25 - Released: 1 - Deadline: 25
+2 - B - 50 - Released: 1 - Deadline: 50
+C - C - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+A - C - D - E - B - 
+3 - A - 1 - 3
+we be updating
+3 - A - 25 - Released: 0 - Deadline: 25
+3 - C - 10 - Released: 0 - Deadline: 10
+3 - D - 10 - Released: 0 - Deadline: 10
+3 - E - 25 - Released: 1 - Deadline: 25
+3 - B - 50 - Released: 1 - Deadline: 50
+after each pass:
+E - C - D - A - B - 
+after each pass:
+E - C - D - A - B - 
+after each pass:
+E - C - D - A - B - 
+after each pass:
+E - C - D - A - B - 
+after each pass:
+E - C - D - A - B - 
+E - C - D - A - B - 
+3 - E - 25 - Released: 1 - Deadline: 25
+3 - C - 10 - Released: 0 - Deadline: 10
+3 - D - 10 - Released: 0 - Deadline: 10
+3 - A - 25 - Released: 0 - Deadline: 25
+3 - B - 50 - Released: 1 - Deadline: 50
+C - C - D - A -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+E - C - D - A - B - 
+4 - E - 1 - 4
+we be updating
+4 - E - 25 - Released: 0 - Deadline: 25
+4 - C - 10 - Released: 0 - Deadline: 10
+4 - D - 10 - Released: 0 - Deadline: 10
+4 - A - 25 - Released: 0 - Deadline: 25
+4 - B - 50 - Released: 1 - Deadline: 50
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+4 - B - 50 - Released: 1 - Deadline: 50
+4 - C - 10 - Released: 0 - Deadline: 10
+4 - D - 10 - Released: 0 - Deadline: 10
+4 - A - 25 - Released: 0 - Deadline: 25
+4 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+5 - B - 1 - 5
+we be updating
+5 - B - 50 - Released: 0 - Deadline: 50
+5 - C - 10 - Released: 0 - Deadline: 10
+5 - D - 10 - Released: 0 - Deadline: 10
+5 - A - 25 - Released: 0 - Deadline: 25
+5 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+5 - B - 50 - Released: 0 - Deadline: 50
+5 - C - 10 - Released: 0 - Deadline: 10
+5 - D - 10 - Released: 0 - Deadline: 10
+5 - A - 25 - Released: 0 - Deadline: 25
+5 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+6 - B - 1 - 6
+we be updating
+6 - B - 50 - Released: 0 - Deadline: 50
+6 - C - 10 - Released: 0 - Deadline: 10
+6 - D - 10 - Released: 0 - Deadline: 10
+6 - A - 25 - Released: 0 - Deadline: 25
+6 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+6 - B - 50 - Released: 0 - Deadline: 50
+6 - C - 10 - Released: 0 - Deadline: 10
+6 - D - 10 - Released: 0 - Deadline: 10
+6 - A - 25 - Released: 0 - Deadline: 25
+6 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+7 - B - 1 - 7
+we be updating
+7 - B - 50 - Released: 0 - Deadline: 50
+7 - C - 10 - Released: 0 - Deadline: 10
+7 - D - 10 - Released: 0 - Deadline: 10
+7 - A - 25 - Released: 0 - Deadline: 25
+7 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+7 - B - 50 - Released: 0 - Deadline: 50
+7 - C - 10 - Released: 0 - Deadline: 10
+7 - D - 10 - Released: 0 - Deadline: 10
+7 - A - 25 - Released: 0 - Deadline: 25
+7 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+8 - B - 1 - 8
+we be updating
+8 - B - 50 - Released: 0 - Deadline: 50
+8 - C - 10 - Released: 0 - Deadline: 10
+8 - D - 10 - Released: 0 - Deadline: 10
+8 - A - 25 - Released: 0 - Deadline: 25
+8 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+8 - B - 50 - Released: 0 - Deadline: 50
+8 - C - 10 - Released: 0 - Deadline: 10
+8 - D - 10 - Released: 0 - Deadline: 10
+8 - A - 25 - Released: 0 - Deadline: 25
+8 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+9 - B - 1 - 9
+we be updating
+9 - B - 50 - Released: 0 - Deadline: 50
+9 - C - 10 - Released: 0 - Deadline: 10
+9 - D - 10 - Released: 0 - Deadline: 10
+9 - A - 25 - Released: 0 - Deadline: 25
+9 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+after each pass:
+B - C - D - A - E - 
+B - C - D - A - E - 
+9 - B - 50 - Released: 0 - Deadline: 50
+9 - C - 10 - Released: 0 - Deadline: 10
+9 - D - 10 - Released: 0 - Deadline: 10
+9 - A - 25 - Released: 0 - Deadline: 25
+9 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+B - C - D - A - E - 
+10 - B - 1 - 10
+we be updating
+10 - B - 50 - Released: 0 - Deadline: 50
+10 - C - 10 - Released: 0 - Deadline: 10
+releaseing: C
+10 - D - 10 - Released: 0 - Deadline: 10
+releaseing: D
+10 - A - 25 - Released: 0 - Deadline: 25
+10 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+D - C - B - A - E - 
+10 - D - 20 - Released: 1 - Deadline: 20
+10 - C - 20 - Released: 1 - Deadline: 20
+10 - B - 50 - Released: 0 - Deadline: 50
+10 - A - 25 - Released: 0 - Deadline: 25
+10 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - A - E - 
+11 - D - 1 - 11
+we be updating
+11 - D - 20 - Released: 0 - Deadline: 20
+11 - C - 20 - Released: 1 - Deadline: 20
+11 - B - 50 - Released: 0 - Deadline: 50
+11 - A - 25 - Released: 0 - Deadline: 25
+11 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+11 - C - 20 - Released: 1 - Deadline: 20
+11 - D - 20 - Released: 0 - Deadline: 20
+11 - B - 50 - Released: 0 - Deadline: 50
+11 - A - 25 - Released: 0 - Deadline: 25
+11 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+12 - C - 2 - 12
+we be updating
+12 - C - 20 - Released: 1 - Deadline: 20
+12 - D - 20 - Released: 0 - Deadline: 20
+12 - B - 50 - Released: 0 - Deadline: 50
+12 - A - 25 - Released: 0 - Deadline: 25
+12 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+12 - C - 20 - Released: 1 - Deadline: 20
+12 - D - 20 - Released: 0 - Deadline: 20
+12 - B - 50 - Released: 0 - Deadline: 50
+12 - A - 25 - Released: 0 - Deadline: 25
+12 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+13 - C - 2 - 13
+we be updating
+13 - C - 20 - Released: 0 - Deadline: 20
+13 - D - 20 - Released: 0 - Deadline: 20
+13 - B - 50 - Released: 0 - Deadline: 50
+13 - A - 25 - Released: 0 - Deadline: 25
+13 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+13 - C - 20 - Released: 0 - Deadline: 20
+13 - D - 20 - Released: 0 - Deadline: 20
+13 - B - 50 - Released: 0 - Deadline: 50
+13 - A - 25 - Released: 0 - Deadline: 25
+13 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+14 - C - 2 - 14
+we be updating
+14 - C - 20 - Released: 0 - Deadline: 20
+14 - D - 20 - Released: 0 - Deadline: 20
+14 - B - 50 - Released: 0 - Deadline: 50
+14 - A - 25 - Released: 0 - Deadline: 25
+14 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+14 - C - 20 - Released: 0 - Deadline: 20
+14 - D - 20 - Released: 0 - Deadline: 20
+14 - B - 50 - Released: 0 - Deadline: 50
+14 - A - 25 - Released: 0 - Deadline: 25
+14 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+15 - C - 2 - 15
+we be updating
+15 - C - 20 - Released: 0 - Deadline: 20
+15 - D - 20 - Released: 0 - Deadline: 20
+15 - B - 50 - Released: 0 - Deadline: 50
+15 - A - 25 - Released: 0 - Deadline: 25
+15 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+15 - C - 20 - Released: 0 - Deadline: 20
+15 - D - 20 - Released: 0 - Deadline: 20
+15 - B - 50 - Released: 0 - Deadline: 50
+15 - A - 25 - Released: 0 - Deadline: 25
+15 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+16 - C - 2 - 16
+we be updating
+16 - C - 20 - Released: 0 - Deadline: 20
+16 - D - 20 - Released: 0 - Deadline: 20
+16 - B - 50 - Released: 0 - Deadline: 50
+16 - A - 25 - Released: 0 - Deadline: 25
+16 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+16 - C - 20 - Released: 0 - Deadline: 20
+16 - D - 20 - Released: 0 - Deadline: 20
+16 - B - 50 - Released: 0 - Deadline: 50
+16 - A - 25 - Released: 0 - Deadline: 25
+16 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+17 - C - 2 - 17
+we be updating
+17 - C - 20 - Released: 0 - Deadline: 20
+17 - D - 20 - Released: 0 - Deadline: 20
+17 - B - 50 - Released: 0 - Deadline: 50
+17 - A - 25 - Released: 0 - Deadline: 25
+17 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+17 - C - 20 - Released: 0 - Deadline: 20
+17 - D - 20 - Released: 0 - Deadline: 20
+17 - B - 50 - Released: 0 - Deadline: 50
+17 - A - 25 - Released: 0 - Deadline: 25
+17 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+18 - C - 2 - 18
+we be updating
+18 - C - 20 - Released: 0 - Deadline: 20
+18 - D - 20 - Released: 0 - Deadline: 20
+18 - B - 50 - Released: 0 - Deadline: 50
+18 - A - 25 - Released: 0 - Deadline: 25
+18 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+18 - C - 20 - Released: 0 - Deadline: 20
+18 - D - 20 - Released: 0 - Deadline: 20
+18 - B - 50 - Released: 0 - Deadline: 50
+18 - A - 25 - Released: 0 - Deadline: 25
+18 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+19 - C - 2 - 19
+we be updating
+19 - C - 20 - Released: 0 - Deadline: 20
+19 - D - 20 - Released: 0 - Deadline: 20
+19 - B - 50 - Released: 0 - Deadline: 50
+19 - A - 25 - Released: 0 - Deadline: 25
+19 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+19 - C - 20 - Released: 0 - Deadline: 20
+19 - D - 20 - Released: 0 - Deadline: 20
+19 - B - 50 - Released: 0 - Deadline: 50
+19 - A - 25 - Released: 0 - Deadline: 25
+19 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+20 - C - 2 - 20
+we be updating
+20 - C - 20 - Released: 0 - Deadline: 20
+releaseing: C
+20 - D - 20 - Released: 0 - Deadline: 20
+releaseing: D
+20 - B - 50 - Released: 0 - Deadline: 50
+20 - A - 25 - Released: 0 - Deadline: 25
+20 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+20 - C - 30 - Released: 1 - Deadline: 30
+20 - D - 30 - Released: 1 - Deadline: 30
+20 - B - 50 - Released: 0 - Deadline: 50
+20 - A - 25 - Released: 0 - Deadline: 25
+20 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+21 - C - 2 - 21
+we be updating
+21 - C - 30 - Released: 1 - Deadline: 30
+21 - D - 30 - Released: 1 - Deadline: 30
+21 - B - 50 - Released: 0 - Deadline: 50
+21 - A - 25 - Released: 0 - Deadline: 25
+21 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+after each pass:
+C - D - B - A - E - 
+C - D - B - A - E - 
+21 - C - 30 - Released: 1 - Deadline: 30
+21 - D - 30 - Released: 1 - Deadline: 30
+21 - B - 50 - Released: 0 - Deadline: 50
+21 - A - 25 - Released: 0 - Deadline: 25
+21 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - A - E - 
+22 - C - 2 - 22
+we be updating
+22 - C - 30 - Released: 0 - Deadline: 30
+22 - D - 30 - Released: 1 - Deadline: 30
+22 - B - 50 - Released: 0 - Deadline: 50
+22 - A - 25 - Released: 0 - Deadline: 25
+22 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+D - C - B - A - E - 
+22 - D - 30 - Released: 1 - Deadline: 30
+22 - C - 30 - Released: 0 - Deadline: 30
+22 - B - 50 - Released: 0 - Deadline: 50
+22 - A - 25 - Released: 0 - Deadline: 25
+22 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - A - E - 
+23 - D - 1 - 23
+we be updating
+23 - D - 30 - Released: 0 - Deadline: 30
+23 - C - 30 - Released: 0 - Deadline: 30
+23 - B - 50 - Released: 0 - Deadline: 50
+23 - A - 25 - Released: 0 - Deadline: 25
+23 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+D - C - B - A - E - 
+23 - D - 30 - Released: 0 - Deadline: 30
+23 - C - 30 - Released: 0 - Deadline: 30
+23 - B - 50 - Released: 0 - Deadline: 50
+23 - A - 25 - Released: 0 - Deadline: 25
+23 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - A - E - 
+24 - D - 1 - 24
+we be updating
+24 - D - 30 - Released: 0 - Deadline: 30
+24 - C - 30 - Released: 0 - Deadline: 30
+24 - B - 50 - Released: 0 - Deadline: 50
+24 - A - 25 - Released: 0 - Deadline: 25
+24 - E - 25 - Released: 0 - Deadline: 25
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+after each pass:
+D - C - B - A - E - 
+D - C - B - A - E - 
+24 - D - 30 - Released: 0 - Deadline: 30
+24 - C - 30 - Released: 0 - Deadline: 30
+24 - B - 50 - Released: 0 - Deadline: 50
+24 - A - 25 - Released: 0 - Deadline: 25
+24 - E - 25 - Released: 0 - Deadline: 25
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - A - E - 
+25 - D - 1 - 25
+we be updating
+25 - D - 30 - Released: 0 - Deadline: 30
+25 - C - 30 - Released: 0 - Deadline: 30
+25 - B - 50 - Released: 0 - Deadline: 50
+25 - A - 25 - Released: 0 - Deadline: 25
+releaseing: A
+25 - E - 25 - Released: 0 - Deadline: 25
+releaseing: E
+after each pass:
+E - C - B - A - D - 
+after each pass:
+E - C - B - A - D - 
+after each pass:
+E - C - B - A - D - 
+after each pass:
+E - C - B - A - D - 
+after each pass:
+E - C - B - A - D - 
+E - C - B - A - D - 
+25 - E - 50 - Released: 1 - Deadline: 50
+25 - C - 30 - Released: 0 - Deadline: 30
+25 - B - 50 - Released: 0 - Deadline: 50
+25 - A - 50 - Released: 1 - Deadline: 50
+25 - D - 30 - Released: 0 - Deadline: 30
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+E - C - B - A - D - 
+26 - E - 1 - 26
+we be updating
+26 - E - 50 - Released: 0 - Deadline: 50
+26 - C - 30 - Released: 0 - Deadline: 30
+26 - B - 50 - Released: 0 - Deadline: 50
+26 - A - 50 - Released: 1 - Deadline: 50
+26 - D - 30 - Released: 0 - Deadline: 30
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+A - C - B - E - D - 
+26 - A - 50 - Released: 1 - Deadline: 50
+26 - C - 30 - Released: 0 - Deadline: 30
+26 - B - 50 - Released: 0 - Deadline: 50
+26 - E - 50 - Released: 0 - Deadline: 50
+26 - D - 30 - Released: 0 - Deadline: 30
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+A - C - B - E - D - 
+27 - A - 1 - 27
+we be updating
+27 - A - 50 - Released: 0 - Deadline: 50
+27 - C - 30 - Released: 0 - Deadline: 30
+27 - B - 50 - Released: 0 - Deadline: 50
+27 - E - 50 - Released: 0 - Deadline: 50
+27 - D - 30 - Released: 0 - Deadline: 30
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+A - C - B - E - D - 
+27 - A - 50 - Released: 0 - Deadline: 50
+27 - C - 30 - Released: 0 - Deadline: 30
+27 - B - 50 - Released: 0 - Deadline: 50
+27 - E - 50 - Released: 0 - Deadline: 50
+27 - D - 30 - Released: 0 - Deadline: 30
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+A - C - B - E - D - 
+28 - A - 1 - 28
+we be updating
+28 - A - 50 - Released: 0 - Deadline: 50
+28 - C - 30 - Released: 0 - Deadline: 30
+28 - B - 50 - Released: 0 - Deadline: 50
+28 - E - 50 - Released: 0 - Deadline: 50
+28 - D - 30 - Released: 0 - Deadline: 30
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+A - C - B - E - D - 
+28 - A - 50 - Released: 0 - Deadline: 50
+28 - C - 30 - Released: 0 - Deadline: 30
+28 - B - 50 - Released: 0 - Deadline: 50
+28 - E - 50 - Released: 0 - Deadline: 50
+28 - D - 30 - Released: 0 - Deadline: 30
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+A - C - B - E - D - 
+29 - A - 1 - 29
+we be updating
+29 - A - 50 - Released: 0 - Deadline: 50
+29 - C - 30 - Released: 0 - Deadline: 30
+29 - B - 50 - Released: 0 - Deadline: 50
+29 - E - 50 - Released: 0 - Deadline: 50
+29 - D - 30 - Released: 0 - Deadline: 30
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+after each pass:
+A - C - B - E - D - 
+A - C - B - E - D - 
+29 - A - 50 - Released: 0 - Deadline: 50
+29 - C - 30 - Released: 0 - Deadline: 30
+29 - B - 50 - Released: 0 - Deadline: 50
+29 - E - 50 - Released: 0 - Deadline: 50
+29 - D - 30 - Released: 0 - Deadline: 30
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+A - C - B - E - D - 
+30 - A - 1 - 30
+we be updating
+30 - A - 50 - Released: 0 - Deadline: 50
+30 - C - 30 - Released: 0 - Deadline: 30
+releaseing: C
+30 - B - 50 - Released: 0 - Deadline: 50
+30 - E - 50 - Released: 0 - Deadline: 50
+30 - D - 30 - Released: 0 - Deadline: 30
+releaseing: D
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+30 - D - 40 - Released: 1 - Deadline: 40
+30 - C - 40 - Released: 1 - Deadline: 40
+30 - B - 50 - Released: 0 - Deadline: 50
+30 - E - 50 - Released: 0 - Deadline: 50
+30 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+31 - D - 1 - 31
+we be updating
+31 - D - 40 - Released: 0 - Deadline: 40
+31 - C - 40 - Released: 1 - Deadline: 40
+31 - B - 50 - Released: 0 - Deadline: 50
+31 - E - 50 - Released: 0 - Deadline: 50
+31 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+31 - C - 40 - Released: 1 - Deadline: 40
+31 - D - 40 - Released: 0 - Deadline: 40
+31 - B - 50 - Released: 0 - Deadline: 50
+31 - E - 50 - Released: 0 - Deadline: 50
+31 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+32 - C - 2 - 32
+we be updating
+32 - C - 40 - Released: 1 - Deadline: 40
+32 - D - 40 - Released: 0 - Deadline: 40
+32 - B - 50 - Released: 0 - Deadline: 50
+32 - E - 50 - Released: 0 - Deadline: 50
+32 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+32 - C - 40 - Released: 1 - Deadline: 40
+32 - D - 40 - Released: 0 - Deadline: 40
+32 - B - 50 - Released: 0 - Deadline: 50
+32 - E - 50 - Released: 0 - Deadline: 50
+32 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+33 - C - 2 - 33
+we be updating
+33 - C - 40 - Released: 0 - Deadline: 40
+33 - D - 40 - Released: 0 - Deadline: 40
+33 - B - 50 - Released: 0 - Deadline: 50
+33 - E - 50 - Released: 0 - Deadline: 50
+33 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+33 - C - 40 - Released: 0 - Deadline: 40
+33 - D - 40 - Released: 0 - Deadline: 40
+33 - B - 50 - Released: 0 - Deadline: 50
+33 - E - 50 - Released: 0 - Deadline: 50
+33 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+34 - C - 2 - 34
+we be updating
+34 - C - 40 - Released: 0 - Deadline: 40
+34 - D - 40 - Released: 0 - Deadline: 40
+34 - B - 50 - Released: 0 - Deadline: 50
+34 - E - 50 - Released: 0 - Deadline: 50
+34 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+34 - C - 40 - Released: 0 - Deadline: 40
+34 - D - 40 - Released: 0 - Deadline: 40
+34 - B - 50 - Released: 0 - Deadline: 50
+34 - E - 50 - Released: 0 - Deadline: 50
+34 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+35 - C - 2 - 35
+we be updating
+35 - C - 40 - Released: 0 - Deadline: 40
+35 - D - 40 - Released: 0 - Deadline: 40
+35 - B - 50 - Released: 0 - Deadline: 50
+35 - E - 50 - Released: 0 - Deadline: 50
+35 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+35 - C - 40 - Released: 0 - Deadline: 40
+35 - D - 40 - Released: 0 - Deadline: 40
+35 - B - 50 - Released: 0 - Deadline: 50
+35 - E - 50 - Released: 0 - Deadline: 50
+35 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+36 - C - 2 - 36
+we be updating
+36 - C - 40 - Released: 0 - Deadline: 40
+36 - D - 40 - Released: 0 - Deadline: 40
+36 - B - 50 - Released: 0 - Deadline: 50
+36 - E - 50 - Released: 0 - Deadline: 50
+36 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+36 - C - 40 - Released: 0 - Deadline: 40
+36 - D - 40 - Released: 0 - Deadline: 40
+36 - B - 50 - Released: 0 - Deadline: 50
+36 - E - 50 - Released: 0 - Deadline: 50
+36 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+37 - C - 2 - 37
+we be updating
+37 - C - 40 - Released: 0 - Deadline: 40
+37 - D - 40 - Released: 0 - Deadline: 40
+37 - B - 50 - Released: 0 - Deadline: 50
+37 - E - 50 - Released: 0 - Deadline: 50
+37 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+37 - C - 40 - Released: 0 - Deadline: 40
+37 - D - 40 - Released: 0 - Deadline: 40
+37 - B - 50 - Released: 0 - Deadline: 50
+37 - E - 50 - Released: 0 - Deadline: 50
+37 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+38 - C - 2 - 38
+we be updating
+38 - C - 40 - Released: 0 - Deadline: 40
+38 - D - 40 - Released: 0 - Deadline: 40
+38 - B - 50 - Released: 0 - Deadline: 50
+38 - E - 50 - Released: 0 - Deadline: 50
+38 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+38 - C - 40 - Released: 0 - Deadline: 40
+38 - D - 40 - Released: 0 - Deadline: 40
+38 - B - 50 - Released: 0 - Deadline: 50
+38 - E - 50 - Released: 0 - Deadline: 50
+38 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+39 - C - 2 - 39
+we be updating
+39 - C - 40 - Released: 0 - Deadline: 40
+39 - D - 40 - Released: 0 - Deadline: 40
+39 - B - 50 - Released: 0 - Deadline: 50
+39 - E - 50 - Released: 0 - Deadline: 50
+39 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+39 - C - 40 - Released: 0 - Deadline: 40
+39 - D - 40 - Released: 0 - Deadline: 40
+39 - B - 50 - Released: 0 - Deadline: 50
+39 - E - 50 - Released: 0 - Deadline: 50
+39 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+40 - C - 2 - 40
+we be updating
+40 - C - 40 - Released: 0 - Deadline: 40
+releaseing: C
+40 - D - 40 - Released: 0 - Deadline: 40
+releaseing: D
+40 - B - 50 - Released: 0 - Deadline: 50
+40 - E - 50 - Released: 0 - Deadline: 50
+40 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+40 - C - 50 - Released: 1 - Deadline: 50
+40 - D - 50 - Released: 1 - Deadline: 50
+40 - B - 50 - Released: 0 - Deadline: 50
+40 - E - 50 - Released: 0 - Deadline: 50
+40 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+41 - C - 2 - 41
+we be updating
+41 - C - 50 - Released: 1 - Deadline: 50
+41 - D - 50 - Released: 1 - Deadline: 50
+41 - B - 50 - Released: 0 - Deadline: 50
+41 - E - 50 - Released: 0 - Deadline: 50
+41 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+after each pass:
+C - D - B - E - A - 
+C - D - B - E - A - 
+41 - C - 50 - Released: 1 - Deadline: 50
+41 - D - 50 - Released: 1 - Deadline: 50
+41 - B - 50 - Released: 0 - Deadline: 50
+41 - E - 50 - Released: 0 - Deadline: 50
+41 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C -  -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+C - D - B - E - A - 
+42 - C - 2 - 42
+we be updating
+42 - C - 50 - Released: 0 - Deadline: 50
+42 - D - 50 - Released: 1 - Deadline: 50
+42 - B - 50 - Released: 0 - Deadline: 50
+42 - E - 50 - Released: 0 - Deadline: 50
+42 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+42 - D - 50 - Released: 1 - Deadline: 50
+42 - C - 50 - Released: 0 - Deadline: 50
+42 - B - 50 - Released: 0 - Deadline: 50
+42 - E - 50 - Released: 0 - Deadline: 50
+42 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C -  -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+43 - D - 1 - 43
+we be updating
+43 - D - 50 - Released: 0 - Deadline: 50
+43 - C - 50 - Released: 0 - Deadline: 50
+43 - B - 50 - Released: 0 - Deadline: 50
+43 - E - 50 - Released: 0 - Deadline: 50
+43 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+43 - D - 50 - Released: 0 - Deadline: 50
+43 - C - 50 - Released: 0 - Deadline: 50
+43 - B - 50 - Released: 0 - Deadline: 50
+43 - E - 50 - Released: 0 - Deadline: 50
+43 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+44 - D - 1 - 44
+we be updating
+44 - D - 50 - Released: 0 - Deadline: 50
+44 - C - 50 - Released: 0 - Deadline: 50
+44 - B - 50 - Released: 0 - Deadline: 50
+44 - E - 50 - Released: 0 - Deadline: 50
+44 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+44 - D - 50 - Released: 0 - Deadline: 50
+44 - C - 50 - Released: 0 - Deadline: 50
+44 - B - 50 - Released: 0 - Deadline: 50
+44 - E - 50 - Released: 0 - Deadline: 50
+44 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+45 - D - 1 - 45
+we be updating
+45 - D - 50 - Released: 0 - Deadline: 50
+45 - C - 50 - Released: 0 - Deadline: 50
+45 - B - 50 - Released: 0 - Deadline: 50
+45 - E - 50 - Released: 0 - Deadline: 50
+45 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+45 - D - 50 - Released: 0 - Deadline: 50
+45 - C - 50 - Released: 0 - Deadline: 50
+45 - B - 50 - Released: 0 - Deadline: 50
+45 - E - 50 - Released: 0 - Deadline: 50
+45 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+46 - D - 1 - 46
+we be updating
+46 - D - 50 - Released: 0 - Deadline: 50
+46 - C - 50 - Released: 0 - Deadline: 50
+46 - B - 50 - Released: 0 - Deadline: 50
+46 - E - 50 - Released: 0 - Deadline: 50
+46 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+46 - D - 50 - Released: 0 - Deadline: 50
+46 - C - 50 - Released: 0 - Deadline: 50
+46 - B - 50 - Released: 0 - Deadline: 50
+46 - E - 50 - Released: 0 - Deadline: 50
+46 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+47 - D - 1 - 47
+we be updating
+47 - D - 50 - Released: 0 - Deadline: 50
+47 - C - 50 - Released: 0 - Deadline: 50
+47 - B - 50 - Released: 0 - Deadline: 50
+47 - E - 50 - Released: 0 - Deadline: 50
+47 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+47 - D - 50 - Released: 0 - Deadline: 50
+47 - C - 50 - Released: 0 - Deadline: 50
+47 - B - 50 - Released: 0 - Deadline: 50
+47 - E - 50 - Released: 0 - Deadline: 50
+47 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+48 - D - 1 - 48
+we be updating
+48 - D - 50 - Released: 0 - Deadline: 50
+48 - C - 50 - Released: 0 - Deadline: 50
+48 - B - 50 - Released: 0 - Deadline: 50
+48 - E - 50 - Released: 0 - Deadline: 50
+48 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+48 - D - 50 - Released: 0 - Deadline: 50
+48 - C - 50 - Released: 0 - Deadline: 50
+48 - B - 50 - Released: 0 - Deadline: 50
+48 - E - 50 - Released: 0 - Deadline: 50
+48 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+NEW TIMING*********************************************************************
+D - C - B - E - A - 
+49 - D - 1 - 49
+we be updating
+49 - D - 50 - Released: 0 - Deadline: 50
+49 - C - 50 - Released: 0 - Deadline: 50
+49 - B - 50 - Released: 0 - Deadline: 50
+49 - E - 50 - Released: 0 - Deadline: 50
+49 - A - 50 - Released: 0 - Deadline: 50
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+after each pass:
+D - C - B - E - A - 
+D - C - B - E - A - 
+49 - D - 50 - Released: 0 - Deadline: 50
+49 - C - 50 - Released: 0 - Deadline: 50
+49 - B - 50 - Released: 0 - Deadline: 50
+49 - E - 50 - Released: 0 - Deadline: 50
+49 - A - 50 - Released: 0 - Deadline: 50
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+C - C - D - A - E - B -  -  -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  - E - A -  -  -  - D - C - C -  -  -  -  -  -  -  - C - C - D -  -  -  -  -  -  - 
+made it past edf

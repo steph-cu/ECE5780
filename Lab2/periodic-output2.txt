@@ -106,6 +106,7 @@ E - got preempted: 24 times, - missed its deadline: 3 times
 B - got preempted: 0 times, - missed its deadline: 1 times 
 Total number of preemptions for RMA: 52
 Total number of deadline misses for RMA: 4
+Average response time for aperiotic tasks: 0
 ************ EDF SCHEDULE ************
 0 - C is scheduled
 1 - C is scheduled
@@ -213,3 +214,4 @@ B - missed its deadline: 1 times
 D - missed its deadline: 2 times 
 E - missed its deadline: 3 times 
 Total number of deadline misses for EDF: 8
+Average response time for aperiotic tasks: -nan

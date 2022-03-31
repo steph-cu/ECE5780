@@ -1,115 +1,137 @@
 ************ RMA SCHEDULE ************
 0 - C - is scheduled
 1 - C - is scheduled
-2 - D - is scheduled
-3 - A - is scheduled
-4 - E - is scheduled
-5 - B - is scheduled
-6
-7
-8
-9
-10 - C - is scheduled
-11 - C - is scheduled
-12 - D - is scheduled
-13
-14
-15
-16
-17
-18
-19
-20 - C - is scheduled
+2 - C - is scheduled
+3 - C - is scheduled
+4 - C - is scheduled
+5 - D - is scheduled
+6 - D - is scheduled
+7 - D - is scheduled
+8 - D - is scheduled
+9 - B - is scheduled
+10 - C - is scheduled - B - has been preempted by C
+11 - C - is scheduled - B - has been preempted by C
+12 - C - is scheduled - B - has been preempted by C
+13 - C - is scheduled - B - has been preempted by C
+14 - C - is scheduled - B - has been preempted by C
+15 - D - is scheduled - B - has been preempted by D
+16 - D - is scheduled - B - has been preempted by D
+17 - D - is scheduled - B - has been preempted by D
+18 - D - is scheduled - B - has been preempted by D
+19 - B - is scheduled
+20 - C - is scheduled - E - Missed it's deadline
 21 - C - is scheduled
-22 - D - is scheduled
-23
-24
-25 - A - is scheduled
-26 - E - is scheduled
-27
-28
-29
-30 - C - is scheduled
-31 - C - is scheduled
-32 - D - is scheduled
-33
-34
-35
-36
-37
-38
-39
-40 - C - is scheduled
+22 - C - is scheduled
+23 - C - is scheduled
+24 - C - is scheduled
+25 - D - is scheduled
+26 - D - is scheduled
+27 - D - is scheduled
+28 - D - is scheduled
+29 - B - is scheduled
+30 - C - is scheduled - B - has been preempted by C - A - Missed it's deadline
+31 - C - is scheduled - B - has been preempted by C
+32 - C - is scheduled - B - has been preempted by C
+33 - C - is scheduled - B - has been preempted by C
+34 - C - is scheduled - B - has been preempted by C
+35 - D - is scheduled - B - has been preempted by D
+36 - D - is scheduled - B - has been preempted by D
+37 - D - is scheduled - B - has been preempted by D
+38 - D - is scheduled - B - has been preempted by D
+39 - B - is scheduled
+40 - C - is scheduled - E - Missed it's deadline
 41 - C - is scheduled
-42 - D - is scheduled
-43
-44
-45
-46
-47
-48
-49
+42 - C - is scheduled
+43 - C - is scheduled
+44 - C - is scheduled
+45 - D - is scheduled
+46 - D - is scheduled
+47 - D - is scheduled
+48 - D - is scheduled
+49 - B - is scheduled
+50 - C - is scheduled - B - has been preempted by C
+51 - C - is scheduled - B - has been preempted by C
+52 - C - is scheduled - B - has been preempted by C
+53 - C - is scheduled - B - has been preempted by C
+54 - C - is scheduled - B - has been preempted by C
+55 - D - is scheduled - B - has been preempted by D
+56 - D - is scheduled - B - has been preempted by D
+57 - D - is scheduled - B - has been preempted by D
+58 - D - is scheduled - B - has been preempted by D
+59 - B - is scheduled
 C - got preempted: 0 times, - missed its deadline: 0 times 
 D - got preempted: 0 times, - missed its deadline: 0 times 
-A - got preempted: 0 times, - missed its deadline: 0 times 
-E - got preempted: 0 times, - missed its deadline: 0 times 
-B - got preempted: 0 times, - missed its deadline: 0 times 
-Total number of preemptions for RMA: 0
-Total number of deadline misses for RMA: 0
+B - got preempted: 27 times, - missed its deadline: 0 times 
+E - got preempted: 0 times, - missed its deadline: 2 times 
+A - got preempted: 0 times, - missed its deadline: 1 times 
+Total number of preemptions for RMA: 27
+Total number of deadline misses for RMA: 3
+Average response time for aperiotic tasks: 0
 ************ EDF SCHEDULE ************
 0 - C is scheduled
 1 - C is scheduled
-2 - D is scheduled
-3 - A is scheduled
-4 - E is scheduled
-5 - B is scheduled
-6
-7
-8
-9
-10
-11 - D is scheduled
+2 - C is scheduled
+3 - C is scheduled
+4 - C is scheduled
+5 - D is scheduled
+6 - D is scheduled
+7 - D is scheduled
+8 - D is scheduled
+9 - B is scheduled
+10 - B is scheduled
+11 - C is scheduled
 12 - C is scheduled
 13 - C is scheduled
-14
-15
-16
-17
-18
-19
-20 - C is scheduled
-21 - C is scheduled
-22 - D is scheduled
-23
-24
-25
-26 - E is scheduled
-27 - A is scheduled
-28
-29
-30
+14 - C is scheduled
+15 - C is scheduled
+16 - D is scheduled
+17 - D is scheduled
+18 - D is scheduled
+19 - D is scheduled
+20 - E missed its deadline - E is scheduled
+21 - E is scheduled
+22 - C is scheduled
+23 - C is scheduled
+24 - C is scheduled
+25 - C is scheduled
+26 - C is scheduled
+27 - D is scheduled
+28 - D is scheduled
+29 - D is scheduled
+30 - D missed its deadline - A missed its deadline - D is scheduled
 31 - D is scheduled
-32 - C is scheduled
-33 - C is scheduled
-34
-35
-36
-37
-38
-39
-40 - C is scheduled
-41 - C is scheduled
+32 - D is scheduled
+33 - D is scheduled
+34 - C is scheduled
+35 - C is scheduled
+36 - C is scheduled
+37 - C is scheduled
+38 - C is scheduled
+39 - B is scheduled
+40 - B missed its deadline - B is scheduled
+41 - B is scheduled
 42 - D is scheduled
-43
-44
-45
-46
-47
-48
-49
-D - missed its deadline: 0 times 
-C - missed its deadline: 0 times 
-B - missed its deadline: 0 times 
-E - missed its deadline: 0 times 
-A - missed its deadline: 0 times 
-Total number of deadline misses for EDF: 0
+43 - D is scheduled
+44 - D is scheduled
+45 - D is scheduled
+46 - C is scheduled
+47 - C is scheduled
+48 - C is scheduled
+49 - C is scheduled
+50 - C missed its deadline - C is scheduled
+51 - C is scheduled
+52 - C is scheduled
+53 - C is scheduled
+54 - C is scheduled
+55 - E is scheduled
+56 - E is scheduled
+57 - A is scheduled
+58 - A is scheduled
+59 - D is scheduled
+D - missed its deadline: 1 times 
+A - missed its deadline: 2 times 
+B - missed its deadline: 1 times 
+E - missed its deadline: 3 times 
+C - missed its deadline: 1 times 
+Total number of deadline misses for EDF: 8
+Average response time for aperiotic tasks: -nan

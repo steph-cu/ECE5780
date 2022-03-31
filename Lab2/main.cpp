@@ -42,12 +42,42 @@ void sort(vector<Task*> &list)// will sort the array by priority (initial period
     
 }
 
+class AperioticPreemption{
+    public:
+        int location;
+        string string;
+    AperioticPreemption(){
+        location = 0;
+        string = "";
+    }
+};
+
 void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
 {// not sure where to put the aperiotic (whether they need to be top or low priority) {I prefer top, so before everything else}
     outputFile << "************ RMA SCHEDULE ************" << endl;
+    vector<AperioticPreemption> aperioticPreemptions;
+    float delayedTiming = 0;
+    float numAperioticTasks = 1;
+    bool aperioticRun = false;
     for(int currTaskIndex = 0; currTaskIndex < taskList.size(); currTaskIndex++  ){
-        if(taskList.at(currTaskIndex)->Aperiotic){
-            for(int currTimingIndex = taskList.at(currTaskIndex)->period; currTimingIndex < taskList.at(currTaskIndex)->period + taskList.at(currTaskIndex)->executionTime ; currTimingIndex++){
+        Task* currTask = taskList.at(currTaskIndex);
+        if(currTask->Aperiotic){
+            numAperioticTasks++;
+            int len = taskList.at(currTaskIndex)->period + taskList.at(currTaskIndex)->executionTime;
+            for(int currTimingIndex = taskList.at(currTaskIndex)->period; currTimingIndex < len ; currTimingIndex++){
+                while(timing.at(currTimingIndex) != ""){ // look for the next open spot to schedule it.
+                    AperioticPreemption preemption;
+                    preemption.location = currTimingIndex;
+                    preemption.string = " - " + currTask->id + " - is preempted by " + timing.at(currTimingIndex);
+                    aperioticPreemptions.push_back(preemption);
+                    currTask->numPreemptions++; 
+                    currTimingIndex++;
+                    len++;
+                }
+                if(currTask->period != currTimingIndex && aperioticRun == false){
+                    aperioticRun = true;
+                    delayedTiming += currTimingIndex - currTask->period;
+                }
                 timing.at(currTimingIndex ) = taskList.at(currTaskIndex)->id;
                 taskList.at(currTaskIndex)->released == false;
             }
@@ -60,7 +90,13 @@ void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
         outputFile << currTimingIndex ;
         if(currTiming != ""){
             outputFile << " - " << currTiming << " - is scheduled";
-        } 
+        }
+        for(int i = 0; i < aperioticPreemptions.size();i++ ){
+            if(aperioticPreemptions.at(i).location == currTimingIndex){
+                outputFile << aperioticPreemptions.at(i).string;
+            }
+        }
+
         for(int currTaskIndex = 0; currTaskIndex < taskList.size(); currTaskIndex++){ // look at each task and decide if it should go into that timing segment.
             Task* currTask = taskList.at(currTaskIndex);
             // check each task if it's passed it's deadline to see if it got missed or if it needs to be reset.
@@ -79,6 +115,11 @@ void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
                 currTask->numExecutions += 1; 
                 currTask->currentDeadline += currTask->period; // set the next deadline
             }
+
+            // if(currTask->released == false && currTask->currentExecutionCounter == 0){ //if it is not ready to execute and hasn't been preempted
+
+            //     continue;
+            // }
 
             if(currTiming != ""){ //if something has been scheduled, it was put there by a higher priority task and go on to the next timing segment.
                 if(currTask->currentExecutionCounter != 0){ //|| currTask->released == true
@@ -115,6 +156,7 @@ void RMA(vector<Task*> &taskList, vector<string> &timing, ofstream &outputFile)
     }
     outputFile << "Total number of preemptions for RMA: " << totalPreemptions << endl;
     outputFile << "Total number of deadline misses for RMA: " << totalDeadlineMisses << endl;
+    outputFile << "Average response time for aperiotic tasks: " << (delayedTiming/numAperioticTasks) << endl;
 }
 
 void update(vector<Task*> &tasks, int time, ofstream &outputFile)
@@ -147,6 +189,9 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
 {
     outputFile << "************ EDF SCHEDULE ************" << endl;
     int consecutive = 0;
+    float delayedTiming = 0;
+    float numAperioticTasks = 0;
+    bool aperioticRun = false;
     sort(tasks);
     Task* currTask = tasks.at(0); // If sort works, this should always be top priority
     currTask->currentExecutionCounter = 0;
@@ -155,6 +200,11 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
         outputFile << currTimeIndex;
         update(tasks, currTimeIndex, outputFile);
         if(currTask->released == true){//we're executing
+            if(currTask->Aperiotic && aperioticRun == false){
+                aperioticRun = true;
+                numAperioticTasks++;
+                delayedTiming += currTimeIndex - currTask->period ;
+            }
             currTask->currentExecutionCounter++;
             timing2.at(currTimeIndex) = currTask->id;
             outputFile << " - " << currTask->id << " is scheduled";
@@ -165,6 +215,7 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
             consecutive = 0;
             update(tasks, currTimeIndex, outputFile);
             currTask = tasks.at(0);
+            aperioticRun = false;
         }
         outputFile << endl;
     }
@@ -177,6 +228,7 @@ void EDF(vector<Task*> &tasks, vector<string> &timing2, ofstream &outputFile)
         outputFile << currTask->id << " - missed its deadline: " << currTask->numMissedDeadlines << " times "<< endl;
     }
     outputFile << "Total number of deadline misses for EDF: " << totalDeadlineMisses << endl;
+    outputFile << "Average response time for aperiotic tasks: " << (delayedTiming/numAperioticTasks);
 }
 
 int main(int argc, char const *argv[])
